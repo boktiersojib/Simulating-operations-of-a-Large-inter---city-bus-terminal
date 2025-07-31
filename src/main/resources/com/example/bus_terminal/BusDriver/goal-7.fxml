@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.BusDriver.Goal7Controller">
+   <children>
+      <Button layoutX="234.0" layoutY="103.0" mnemonicParsing="false" onAction="#EndTripOnAction" text="End Trip" />
+      <TableView fx:id="EndTripTableView" layoutX="176.0" layoutY="157.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="DestinationC1" prefWidth="95.20001220703125" text="Destination" />
+          <TableColumn fx:id="TimeC2" prefWidth="104.0" text="Time" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
