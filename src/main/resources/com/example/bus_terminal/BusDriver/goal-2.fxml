@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="532.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.BusDriver.Goal2Controller">
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.BusDriver.Goal2Controller">
    <children>
-      <Label fx:id="MarkArrivalLabel" layoutX="51.0" layoutY="176.0" text="Mark Arrival:" />
-      <RadioButton fx:id="NoRadioButton" layoutX="206.0" layoutY="176.0" mnemonicParsing="false" text="No" />
-      <RadioButton fx:id="YesRadioButton" layoutX="131.0" layoutY="176.0" mnemonicParsing="false" text="Yes" />
-      <Label fx:id="SelectTripLabel" layoutX="56.0" layoutY="85.0" text="Select Trip:" />
-      <ComboBox fx:id="SelectTripComboBox" layoutX="131.0" layoutY="81.0" prefWidth="150.0" />
-      <TableView fx:id="TripTableView" layoutX="321.0" layoutY="81.0" prefHeight="200.0" prefWidth="200.0">
+      <Label fx:id="MarkArrivalLabel" layoutX="80.0" layoutY="216.0" text="Mark Arrival:" />
+      <RadioButton fx:id="NoRadioButton" layoutX="242.0" layoutY="216.0" mnemonicParsing="false" text="No" />
+      <RadioButton fx:id="YesRadioButton" layoutX="186.0" layoutY="216.0" mnemonicParsing="false" text="Yes" />
+      <Label fx:id="SelectTripLabel" layoutX="80.0" layoutY="144.0" text="Select Trip:" />
+      <ComboBox fx:id="SelectTripComboBox" layoutX="151.0" layoutY="140.0" prefWidth="150.0" />
+      <TableView fx:id="TripTableView" layoutX="423.0" layoutY="107.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
           <TableColumn fx:id="TripC1" prefWidth="75.0" text="Trip" />
           <TableColumn fx:id="MarkArrivalC2" prefWidth="123.99998474121094" text="Mark Arrival" />
         </columns>
       </TableView>
+      <Label layoutX="199.0" layoutY="28.0" text="Mark arrival at terminal">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="631.0" layoutY="380.0" mnemonicParsing="false" onAction="#BackToDashBoardOnAction" text="Back To DashBoard" />
    </children>
 </AnchorPane>

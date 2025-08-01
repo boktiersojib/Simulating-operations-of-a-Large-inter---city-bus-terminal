@@ -18,4 +18,8 @@ public class Goal5Controller
     @javafx.fxml.FXML
     public void SubmitButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void BackToDashBoardOnAction(ActionEvent actionEvent) {
+    }
 }

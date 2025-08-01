@@ -1,5 +1,9 @@
 package com.example.bus_terminal.BusDriver;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
 public class Goal7Controller
 {
     @javafx.fxml.FXML
@@ -15,5 +19,9 @@ public class Goal7Controller
 
     @javafx.fxml.FXML
     public void EndTripOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void BackToDashBoardOnAction(ActionEvent actionEvent) {
     }
 }

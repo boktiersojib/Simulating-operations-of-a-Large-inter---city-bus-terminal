@@ -1,27 +1,29 @@
-package com.example.bus_terminal.BusDriver;
+package com.example.bus_terminal.Passenger;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class Goal6Controller
+public class Goal3Controller
 {
     @javafx.fxml.FXML
-    private Label notifiaction;
-    @javafx.fxml.FXML
-    private TextField ReasonTextField;
+    private TextField SeatNoTextField;
     @javafx.fxml.FXML
     private TextField TimeTextField;
     @javafx.fxml.FXML
+    private Label outputlabel;
+    @javafx.fxml.FXML
     private DatePicker DateDatePicker;
+    @javafx.fxml.FXML
+    private TextField TicketIdTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void ConfirmovertimeOnAction(ActionEvent actionEvent) {
+    public void CancelTicketOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

@@ -7,12 +7,12 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.BusDriver.Goal8Controller">
    <children>
-      <Button layoutX="261.0" layoutY="140.0" mnemonicParsing="false" onAction="#TripHistoryButtonOnAction" text="Trip History" />
-      <TableView fx:id="TripHistoryTableView" layoutX="83.0" layoutY="186.0" prefHeight="200.0" prefWidth="449.0">
+      <Button layoutX="365.0" layoutY="124.0" mnemonicParsing="false" onAction="#TripHistoryButtonOnAction" text="Trip History" />
+      <TableView fx:id="TripHistoryTableView" layoutX="83.0" layoutY="186.0" prefHeight="147.0" prefWidth="450.0">
         <columns>
           <TableColumn fx:id="DateofTripC1" prefWidth="95.20001220703125" text="Date of Trip" />
           <TableColumn fx:id="DepartureplaceC2" prefWidth="119.20001220703125" text="Departure place" />
@@ -21,9 +21,15 @@
         </columns>
       </TableView>
       <Label layoutX="55.0" layoutY="34.0" />
-      <Label layoutX="55.0" layoutY="43.0" text="Date of Trip:" />
-      <Label layoutX="55.0" layoutY="81.0" text="Time:" />
-      <DatePicker fx:id="DateofTripDatePicker" layoutX="127.0" layoutY="39.0" />
-      <TextField fx:id="TimeTextField" layoutX="127.0" layoutY="77.0" />
+      <Label layoutX="50.0" layoutY="89.0" text="Date of Trip:" />
+      <Label layoutX="55.0" layoutY="128.0" text="Time:" />
+      <DatePicker fx:id="DateofTripDatePicker" layoutX="140.0" layoutY="85.0" />
+      <TextField fx:id="TimeTextField" layoutX="140.0" layoutY="124.0" />
+      <Button layoutX="463.0" layoutY="355.0" mnemonicParsing="false" onAction="#BackToDashBoardOnAction" text="Back To DashBoard" />
+      <Label layoutX="89.0" layoutY="7.0" text=" View past completed trips">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

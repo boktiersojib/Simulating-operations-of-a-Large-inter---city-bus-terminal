@@ -1,5 +1,6 @@
 package com.example.bus_terminal.BusDriver;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -38,5 +39,9 @@ public class Goal1Controller
 
     @javafx.fxml.FXML
     public void SearchOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void BacktoDashBoardOnAction(ActionEvent actionEvent) {
     }
 }
