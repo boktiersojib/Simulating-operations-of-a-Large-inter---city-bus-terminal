@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.LoginController">
+   <children>
+      <Label layoutX="350.0" layoutY="41.0" prefHeight="54.0" prefWidth="100.0" text="Login">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="251.0" layoutY="141.0" text="User Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="251.0" layoutY="191.0" text="Email/Phone Number:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="251.0" layoutY="236.0" text="Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userNameTF" layoutX="469.0" layoutY="142.0" />
+      <TextField fx:id="emailOrPhoneNumberTF" layoutX="469.0" layoutY="192.0" />
+      <TextField fx:id="passwordTF" layoutX="469.0" layoutY="237.0" />
+      <Button layoutX="374.0" layoutY="314.0" mnemonicParsing="false" onAction="#loginOA" text="Login" />
+      <Button layoutX="637.0" layoutY="428.0" mnemonicParsing="false" onAction="#signUpOA" text="Sign Up" />
+   </children>
+</AnchorPane>

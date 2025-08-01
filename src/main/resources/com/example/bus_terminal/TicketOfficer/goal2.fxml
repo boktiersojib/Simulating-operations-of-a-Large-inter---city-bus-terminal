@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.TicketOfficer.goal2Controller">
+   <children>
+      <Label layoutX="267.0" layoutY="7.0" text="Ticketing Module">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="53.0" text="Enter Passenger Details:">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="232.0" layoutY="55.0" text="Passenger Name:" />
+      <Label layoutX="232.0" layoutY="85.0" text="Phone Number:" />
+      <Label layoutX="232.0" layoutY="116.0" text="Email:" />
+      <Label layoutX="232.0" layoutY="147.0" text="Age:" />
+      <ComboBox fx:id="genderCB" layoutX="569.0" layoutY="60.0" prefWidth="150.0" promptText="Gender" />
+      <TextField fx:id="passengerNameTF" layoutX="345.0" layoutY="51.0" />
+      <TextField fx:id="phoneNumberTF" layoutX="345.0" layoutY="81.0" />
+      <TextField fx:id="emailTF" layoutX="345.0" layoutY="112.0" />
+      <TextField fx:id="agrTF" layoutX="345.0" layoutY="143.0" />
+      <ComboBox fx:id="selectRouteCB" layoutX="30.0" layoutY="206.0" prefWidth="150.0" promptText="Select Route" />
+      <ComboBox fx:id="selectBusCB" layoutX="302.0" layoutY="206.0" prefWidth="150.0" promptText="Select Bus" />
+      <ComboBox fx:id="selectSeatCB" layoutX="569.0" layoutY="206.0" prefWidth="150.0" promptText="Select Seat" />
+      <Label layoutX="30.0" layoutY="271.0" text="Payment Method:" />
+      <RadioButton fx:id="cashRB" layoutX="156.0" layoutY="271.0" mnemonicParsing="false" text="Cash" />
+      <RadioButton fx:id="cardRB" layoutX="280.0" layoutY="271.0" mnemonicParsing="false" text="Card" />
+      <Label layoutX="30.0" layoutY="308.0" text="Amount:" />
+      <TextField fx:id="amountTF" layoutX="106.0" layoutY="304.0" />
+      <Button layoutX="443.0" layoutY="289.0" mnemonicParsing="false" onAction="#acceptPaymentOA" text="Accept Payment" />
+      <Button layoutX="362.0" layoutY="366.0" mnemonicParsing="false" onAction="#issueTicketOA" text="Issue Ticket" />
+      <Button layoutX="362.0" layoutY="420.0" mnemonicParsing="false" onAction="#printTicketOA" text="Print Ticket" />
+      <Button layoutX="630.0" layoutY="420.0" mnemonicParsing="false" onAction="#backToDashboardOA" text="Back to Dashboard" />
+   </children>
+</AnchorPane>

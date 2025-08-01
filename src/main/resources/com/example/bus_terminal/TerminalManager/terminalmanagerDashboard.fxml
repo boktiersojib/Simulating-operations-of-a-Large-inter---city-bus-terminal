@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="terminalManagerDashboardBP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.TerminalManager.terminalmanagerDashboardController">
+   <left>
+      <VBox prefWidth="200.0" style="-fx-background-color: rgba(100, 100, 100, 1);" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#approvesBusesForDepartureOA" prefWidth="200.0" text=" Approves buses for departure" />
+            <Button mnemonicParsing="false" onAction="#viewLiveTerminalActivityOA" prefWidth="200.0" text=" View live terminal activity" />
+            <Button mnemonicParsing="false" onAction="#platformManagementOA" prefWidth="200.0" text="Platform Management" />
+            <Button mnemonicParsing="false" onAction="#incidentsReportOA" prefWidth="200.0" text=" Incidents report" />
+            <Button mnemonicParsing="false" onAction="#scheduleManagerOA" prefWidth="200.0" text="Schedule Manager" />
+            <Button mnemonicParsing="false" onAction="#reportsModuleOA" prefWidth="200.0" text="Reports Module" />
+            <Button mnemonicParsing="false" onAction="#overtimeRequestsOA" prefWidth="200.0" text="Overtime Requests" />
+            <Button mnemonicParsing="false" onAction="#liveTrackingDashboardOA" prefWidth="200.0" text=" Live Tracking Dashboard" />
+            <Button mnemonicParsing="false" onAction="#signOutOA" prefWidth="200.0" text="Sign Out" />
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="infoTA" layoutX="91.0" layoutY="170.0" prefHeight="200.0" prefWidth="420.0" />
+            <Label layoutX="213.0" layoutY="46.0" text="Dashboard">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </right>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
