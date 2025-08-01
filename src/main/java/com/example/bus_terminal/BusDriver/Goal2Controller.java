@@ -1,5 +1,7 @@
 package com.example.bus_terminal.BusDriver;
 
+import javafx.scene.control.*;
+
 public class Goal2Controller
 {
     @javafx.fxml.FXML
