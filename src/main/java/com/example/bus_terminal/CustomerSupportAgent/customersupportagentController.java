@@ -1,5 +1,10 @@
 package com.example.bus_terminal.CustomerSupportAgent;
 
+import javafx.event.ActionEvent;
+import javafx.scene.layout.BorderPane;
+
+import java.awt.*;
+
 public class customersupportagentController
 {
     @javafx.fxml.FXML
@@ -11,11 +16,11 @@ public class customersupportagentController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void assistRefundRequestOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void logPassengerComplaintOA(ActionEvent actionEvent) {
     }
 
@@ -43,7 +48,19 @@ public class customersupportagentController
     public void liveChatOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void provideScheduleInfoOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void refundAssistancePanalOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void passengerComplainLogtOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void scheduleRoutEnquiryPanelOA(ActionEvent actionEvent) {
     }
 }

@@ -1,5 +1,10 @@
 package com.example.bus_terminal.PaymentSystemAdministrator;
 
+import javafx.event.ActionEvent;
+import javafx.scene.layout.BorderPane;
+
+import java.awt.*;
+
 public class paymentsystemadministratorController
 {
     @javafx.fxml.FXML

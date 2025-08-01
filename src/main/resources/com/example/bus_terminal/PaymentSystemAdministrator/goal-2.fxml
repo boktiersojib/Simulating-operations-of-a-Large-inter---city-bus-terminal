@@ -7,9 +7,9 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="454.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PaymentSystemAdministrator.Goal2Controller">
+<AnchorPane prefHeight="494.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PaymentSystemAdministrator.Goal2Controller">
    <children>
       <Label layoutX="58.0" layoutY="57.0" prefHeight="26.0" prefWidth="41.0" text="Date " />
       <Label layoutX="58.0" layoutY="102.0" text="Status" />
@@ -25,5 +25,10 @@
             <TableColumn fx:id="paymentMethodTC" prefWidth="140.0" text="Payment Method" />
         </columns>
       </TableView>
+      <Label fx:id="monitorTransactionL" layoutX="305.0" layoutY="25.0" text="Monitor Transactions">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

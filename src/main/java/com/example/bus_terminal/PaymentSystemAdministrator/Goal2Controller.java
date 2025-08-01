@@ -4,6 +4,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 
 public class Goal2Controller
@@ -20,6 +21,8 @@ public class Goal2Controller
     private DatePicker datePicker;
     @javafx.fxml.FXML
     private TableColumn dateTC;
+    @javafx.fxml.FXML
+    private Label monitorTransactionL;
 
     @javafx.fxml.FXML
     public void initialize() {

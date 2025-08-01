@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="542.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PaymentSystemAdministrator.Goal3Controller">
    <children>
@@ -21,20 +21,25 @@
             <TableColumn fx:id="methodTC" prefWidth="141.60003662109375" text="Method" />
         </columns>
       </TableView>
-      <Label layoutX="41.0" layoutY="36.0" text="Transactions" />
-      <ComboBox fx:id="transactionCB" layoutX="116.0" layoutY="32.0" prefWidth="150.0" />
+      <Label layoutX="32.0" layoutY="61.0" text="Transactions" />
+      <ComboBox fx:id="transactionCB" layoutX="115.0" layoutY="57.0" prefWidth="150.0" />
       <Button layoutX="314.0" layoutY="212.0" mnemonicParsing="false" onAction="#viewGatewayResponseOA" text="Views gateway response/logs" />
-      <Label layoutX="39.0" layoutY="82.0" text="Transaction Id" />
-      <Label layoutX="39.0" layoutY="111.0" text="Date" />
+      <Label layoutX="28.0" layoutY="98.0" text="Transaction Id" />
+      <Label layoutX="53.0" layoutY="148.0" text="Date" />
       <Label layoutX="400.0" layoutY="74.0" text="Status" />
       <Label layoutX="400.0" layoutY="111.0" text="Method" />
-      <Label layoutX="39.0" layoutY="148.0" text="Amount" />
-      <TextField fx:id="transactionIdTF" layoutX="125.0" layoutY="78.0" />
-      <TextField fx:id="amountTF" layoutX="117.0" layoutY="144.0" />
-      <DatePicker fx:id="dateDP" layoutX="104.0" layoutY="107.0" />
+      <Label layoutX="394.0" layoutY="148.0" text="Amount" />
+      <TextField fx:id="transactionIdTF" layoutX="116.0" layoutY="94.0" />
+      <TextField fx:id="amountTF" layoutX="455.0" layoutY="144.0" />
+      <DatePicker fx:id="dateDP" layoutX="103.0" layoutY="144.0" />
       <ComboBox fx:id="statusCB" layoutX="455.0" layoutY="70.0" prefWidth="150.0" />
       <ComboBox fx:id="methodCB" layoutX="455.0" layoutY="107.0" prefWidth="150.0" />
       <Button layoutX="114.0" layoutY="212.0" mnemonicParsing="false" onAction="#retryPaymentOA" text="Retry Payment" />
       <Button layoutX="249.0" layoutY="479.0" mnemonicParsing="false" onAction="#notiffyPassengerOA" text="Notifiy passenger" />
+      <Label fx:id="failedTransactionL" layoutX="314.0" layoutY="28.0" text=" Failed Transactions">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

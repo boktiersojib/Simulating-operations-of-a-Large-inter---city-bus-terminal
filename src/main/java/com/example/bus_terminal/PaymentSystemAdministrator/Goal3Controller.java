@@ -1,10 +1,10 @@
 package com.example.bus_terminal.PaymentSystemAdministrator;
 
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
+import javafx.scene.control.*;
 import javafx.scene.control.TextField;
 
+import java.awt.*;
+import java.awt.Label;
 import java.awt.event.ActionEvent;
 
 public class Goal3Controller
@@ -33,6 +33,8 @@ public class Goal3Controller
     private TextField amountTF;
     @javafx.fxml.FXML
     private TableView gatewayTV;
+    @javafx.fxml.FXML
+    private Label failedTransactionL;
 
     @javafx.fxml.FXML
     public void initialize() {
