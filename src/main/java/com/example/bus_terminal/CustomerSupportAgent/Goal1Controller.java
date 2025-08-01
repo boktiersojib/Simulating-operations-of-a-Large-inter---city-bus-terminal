@@ -30,4 +30,8 @@ public class Goal1Controller
     @javafx.fxml.FXML
     public void acceptOA(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backToDashboardOA(ActionEvent actionEvent) {
+    }
 }

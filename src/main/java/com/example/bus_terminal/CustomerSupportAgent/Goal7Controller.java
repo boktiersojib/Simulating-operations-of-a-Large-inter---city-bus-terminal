@@ -30,4 +30,8 @@ public class Goal7Controller
     @javafx.fxml.FXML
     public void closeOA(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backToDashboardOA(ActionEvent actionEvent) {
+    }
 }

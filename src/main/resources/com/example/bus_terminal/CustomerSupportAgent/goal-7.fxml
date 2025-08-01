@@ -25,6 +25,7 @@
       <Label layoutX="28.0" layoutY="111.0" text="Response message" />
       <Label layoutX="368.0" layoutY="70.0" text="Chat history" />
       <Button layoutX="386.0" layoutY="251.0" mnemonicParsing="false" onAction="#sendOA" text="Send " />
-      <Button layoutX="654.0" layoutY="391.0" mnemonicParsing="false" onAction="#closeOA" text="Close" />
+      <Button layoutX="593.0" layoutY="251.0" mnemonicParsing="false" onAction="#closeOA" text="Close" />
+      <Button layoutX="654.0" layoutY="394.0" mnemonicParsing="false" onAction="#backToDashboardOA" text="Back to Dashboard" />
    </children>
 </AnchorPane>

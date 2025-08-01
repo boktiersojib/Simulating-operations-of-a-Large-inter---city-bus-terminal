@@ -45,4 +45,8 @@ public class Goal8Controller
     @javafx.fxml.FXML
     public void selectedOA(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backToDashboardOA(ActionEvent actionEvent) {
+    }
 }

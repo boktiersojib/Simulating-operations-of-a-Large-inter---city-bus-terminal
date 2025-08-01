@@ -25,5 +25,6 @@
       <Button layoutX="497.0" layoutY="212.0" mnemonicParsing="false" onAction="#logsFeedbackOA" text="Logs feedback" />
       <Button layoutX="168.0" layoutY="289.0" mnemonicParsing="false" onAction="#closeCaseOA" text="Close Case" />
       <Button layoutX="459.0" layoutY="289.0" mnemonicParsing="false" onAction="#generateReportOA" text="Generate Report" />
+      <Button layoutX="630.0" layoutY="392.0" mnemonicParsing="false" onAction="#backToDashboardOA" text="Back to Dashboard" />
    </children>
 </AnchorPane>

@@ -41,4 +41,8 @@ public class Goal5Controller
     @javafx.fxml.FXML
     public void searchOA(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backToDashboardOA(ActionEvent actionEvent) {
+    }
 }

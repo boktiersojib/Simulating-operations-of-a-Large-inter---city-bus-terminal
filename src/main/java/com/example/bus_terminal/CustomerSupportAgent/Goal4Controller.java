@@ -35,4 +35,8 @@ public class Goal4Controller
     @javafx.fxml.FXML
     public void updatePassengerOA(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backToDashboardOA(ActionEvent actionEvent) {
+    }
 }

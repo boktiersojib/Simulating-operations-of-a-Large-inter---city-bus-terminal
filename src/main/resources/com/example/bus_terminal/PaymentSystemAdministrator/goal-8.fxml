@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PaymentSystemAdministrator.Goal8Controller">
    <children>
       <Label fx:id="fraudAlertsL" layoutX="326.0" layoutY="36.0" text="Fraud Alerts">
@@ -37,5 +36,6 @@
       <ComboBox fx:id="escalationCB" layoutX="90.0" layoutY="79.0" prefWidth="150.0" />
       <Button layoutX="378.0" layoutY="116.0" mnemonicParsing="false" onAction="#selectedOA" text="Selected" />
       <Button layoutX="578.0" layoutY="116.0" mnemonicParsing="false" onAction="#alertOA" text="Alert" />
+      <Button layoutX="609.0" layoutY="408.0" mnemonicParsing="false" onAction="#backToDashboardOA" text="Back to Dashboard" />
    </children>
 </AnchorPane>

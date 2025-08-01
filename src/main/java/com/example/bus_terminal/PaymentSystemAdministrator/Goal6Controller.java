@@ -50,4 +50,8 @@ public class Goal6Controller
     @javafx.fxml.FXML
     public void saveOA(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backToDashboardOA(ActionEvent actionEvent) {
+    }
 }

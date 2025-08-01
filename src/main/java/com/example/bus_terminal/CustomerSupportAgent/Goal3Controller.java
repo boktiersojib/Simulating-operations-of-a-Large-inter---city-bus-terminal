@@ -42,4 +42,8 @@ public class Goal3Controller
     @javafx.fxml.FXML
     public void closeRequestOA(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backToDashboardOA(ActionEvent actionEvent) {
+    }
 }

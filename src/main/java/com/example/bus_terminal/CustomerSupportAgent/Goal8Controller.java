@@ -39,4 +39,8 @@ public class Goal8Controller
     @Deprecated
     public void openCaseDetailesOA(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backToDashboardOA(ActionEvent actionEvent) {
+    }
 }

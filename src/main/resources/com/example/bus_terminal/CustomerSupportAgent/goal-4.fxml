@@ -28,5 +28,6 @@
       <TextField fx:id="errorDetailsTF" layoutX="154.0" layoutY="83.0" />
       <Button layoutX="458.0" layoutY="142.0" mnemonicParsing="false" onAction="#collectErrorDetailsOA" text="Collect Error Details" />
       <Button layoutX="190.0" layoutY="331.0" mnemonicParsing="false" onAction="#updatePassengerOA" text="Update Passenger" />
+      <Button layoutX="550.0" layoutY="388.0" mnemonicParsing="false" onAction="#backToDashboardOA" text="Back to Dashboard" />
    </children>
 </AnchorPane>

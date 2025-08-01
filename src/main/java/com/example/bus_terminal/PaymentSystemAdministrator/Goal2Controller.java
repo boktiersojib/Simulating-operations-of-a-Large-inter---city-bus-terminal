@@ -31,4 +31,8 @@ public class Goal2Controller
     @javafx.fxml.FXML
     public void searchOA(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backToDashboardOA(ActionEvent actionEvent) {
+    }
 }

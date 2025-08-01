@@ -42,4 +42,8 @@ public class Goal5Controller
     @javafx.fxml.FXML
     public void submitComplaintOA(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backToDashboardOA(ActionEvent actionEvent) {
+    }
 }

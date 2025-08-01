@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="548.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PaymentSystemAdministrator.Goal6Controller">
    <children>
       <Label layoutX="441.0" layoutY="98.0" text="Method Name" />
@@ -37,5 +36,6 @@
       </Label>
       <CheckBox fx:id="toggloeSwitchOnCheckBOx" layoutX="146.0" layoutY="89.0" mnemonicParsing="false" text="on" />
       <CheckBox fx:id="toggleSWitchOfCheckBox" layoutX="217.0" layoutY="89.0" mnemonicParsing="false" text="of" />
+      <Button layoutX="629.0" layoutY="485.0" mnemonicParsing="false" onAction="#backToDashboardOA" text="Back to Dashboard" />
    </children>
 </AnchorPane>

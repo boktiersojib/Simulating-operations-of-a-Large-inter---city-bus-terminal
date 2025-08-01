@@ -39,4 +39,8 @@ public class Goal6Controller
     @javafx.fxml.FXML
     public void logInteractionOA(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backToDashboardOA(ActionEvent actionEvent) {
+    }
 }
