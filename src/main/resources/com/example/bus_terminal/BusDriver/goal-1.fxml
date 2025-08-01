@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="590.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.BusDriver.Goal1Controller">
+   <children>
+      <Label fx:id="ScheduleLabel" layoutX="58.0" layoutY="47.0" text="Schedule:" />
+      <Label fx:id="RouteLAbel" layoutX="58.0" layoutY="90.0" text="Route:" />
+      <ComboBox fx:id="ScheduleComboBox" layoutX="115.0" layoutY="43.0" prefWidth="150.0" />
+      <ComboBox fx:id="RouteComboBox" layoutX="115.0" layoutY="86.0" prefWidth="150.0" />
+      <TableView fx:id="ScheduleTableView" layoutX="34.0" layoutY="238.0" prefHeight="264.0" prefWidth="736.0">
+        <columns>
+          <TableColumn fx:id="ArrivalTimeC1" prefWidth="99.1999740600586" text="Arrival Time" />
+          <TableColumn fx:id="BusNumberC2" prefWidth="98.39999389648438" text="Bus Number" />
+            <TableColumn fx:id="DateofTripC3" prefWidth="74.4000244140625" text="Date of Trip" />
+            <TableColumn fx:id="NumberofStopsC4" prefWidth="116.79998779296875" text="Number of Stops" />
+            <TableColumn fx:id="AssignedPlatformC5" prefWidth="131.19998168945312" text="Assigned Platform" />
+            <TableColumn fx:id="ScheduleC6" prefWidth="93.60003662109375" text="Schedule" />
+            <TableColumn fx:id="RouteC7" prefWidth="129.5999755859375" text="Route" />
+        </columns>
+      </TableView>
+      <Button layoutX="341.0" layoutY="158.0" mnemonicParsing="false" onAction="#SearchOnAction" text="Search" />
+   </children>
+</AnchorPane>

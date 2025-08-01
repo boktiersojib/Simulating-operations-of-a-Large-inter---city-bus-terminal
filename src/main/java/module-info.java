@@ -1,6 +1,7 @@
 module com.example.bus_terminal {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
 
     opens com.example.bus_terminal to javafx.fxml;

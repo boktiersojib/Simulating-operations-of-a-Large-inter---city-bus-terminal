@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="paymentSystemAdministratorBP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PaymentSystemAdministrator.paymentsystemadministratorController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox prefHeight="480.0" prefWidth="312.0" style="-fx-background-color: rgb(100, 100, 100, 10;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#managePaymentGatewayOA" prefHeight="26.0" prefWidth="312.0" text="Manage Payment Gateways" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#monitorTransactionsOA" prefHeight="26.0" prefWidth="312.0" text="Monitor Transactions" />
+            <Button layoutX="10.0" layoutY="36.0" mnemonicParsing="false" onAction="#resolveFailedTransactinOA" prefHeight="26.0" prefWidth="312.0" text="Resolve Failed Transactions" />
+            <Button layoutX="10.0" layoutY="63.0" mnemonicParsing="false" onAction="#generateReportsOA" prefHeight="26.0" prefWidth="312.0" text="Generate Reports" />
+            <Button layoutX="10.0" layoutY="89.0" mnemonicParsing="false" onAction="#processRefundRequsetOA" prefHeight="26.0" prefWidth="312.0" text="Process Refund Requests" />
+            <Button layoutX="10.0" layoutY="116.0" mnemonicParsing="false" onAction="#managePaymentMethodsOA" prefHeight="26.0" prefWidth="312.0" text="Manage Payment Methods" />
+            <Button layoutX="10.0" layoutY="142.0" mnemonicParsing="false" onAction="#reviewPaymentLogsOA" prefHeight="26.0" prefWidth="312.0" text="Review Payment Logs" />
+            <Button layoutX="10.0" layoutY="168.0" mnemonicParsing="false" onAction="#fraudDetectionOA" prefHeight="26.0" prefWidth="312.0" text="Fraud Detection" />
+            <Button layoutX="10.0" layoutY="195.0" mnemonicParsing="false" onAction="#signOutOA" prefHeight="26.0" prefWidth="312.0" text="Sign Out" />
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <AnchorPane prefHeight="480.0" prefWidth="492.0" style="-fx-background-position: );" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="166.0" layoutY="29.0" text="Dashboard">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="infoTA" layoutX="39.0" layoutY="105.0" prefHeight="168.0" prefWidth="370.0" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
