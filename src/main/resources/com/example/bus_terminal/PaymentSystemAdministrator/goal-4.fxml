@@ -7,15 +7,15 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PaymentSystemAdministrator.Goal4Controller">
    <children>
-      <Label layoutX="53.0" layoutY="45.0" text="Report type " />
-      <ComboBox fx:id="reportTypeCB" layoutX="135.0" layoutY="41.0" prefWidth="150.0" />
+      <Label layoutX="444.0" layoutY="78.0" text="Report type " />
+      <ComboBox fx:id="reportTypeCB" layoutX="538.0" layoutY="74.0" prefWidth="150.0" />
       <Label layoutX="56.0" layoutY="87.0" text="Date range" />
       <TextField fx:id="dateRangeTF" layoutX="135.0" layoutY="83.0" />
-      <Button layoutX="141.0" layoutY="146.0" mnemonicParsing="false" onAction="#generateReportOA" text="Generate Report" />
+      <Button layoutX="315.0" layoutY="152.0" mnemonicParsing="false" onAction="#generateReportOA" text="Generate Report" />
       <TableView fx:id="reportTV" layoutX="29.0" layoutY="202.0" prefHeight="200.0" prefWidth="514.0">
         <columns>
           <TableColumn fx:id="transactionIdTC" prefWidth="98.4000244140625" text="Transaction Id" />
@@ -26,5 +26,11 @@
         </columns>
       </TableView>
       <Button layoutX="559.0" layoutY="254.0" mnemonicParsing="false" onAction="#downloadReportOA" text="Download Report" />
+      <Label fx:id="paymentReportL" layoutX="307.0" layoutY="29.0" text="Payment Reports">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="630.0" layoutY="402.0" mnemonicParsing="false" onAction="#backToDashboardOA" text="Back to Dashboard" />
    </children>
 </AnchorPane>

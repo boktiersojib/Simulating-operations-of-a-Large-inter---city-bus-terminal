@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.TerminalManager.goal6Controller">
+   <children>
+      <Label layoutX="287.0" text="Reports Module">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="selectReportTypeCB" layoutX="122.0" layoutY="91.0" prefWidth="150.0" promptText="Select Report Type" />
+      <Button layoutX="122.0" layoutY="140.0" mnemonicParsing="false" onAction="#generateOA" text="Generate" />
+      <TableView fx:id="resultTV" layoutX="122.0" layoutY="202.0" prefHeight="200.0" prefWidth="561.0">
+        <columns>
+          <TableColumn fx:id="dateCol" prefWidth="120.800048828125" text="Date" />
+          <TableColumn fx:id="tripCompletedCol" prefWidth="167.199951171875" text="Trip Completed" />
+            <TableColumn fx:id="totalPassengerCol" prefWidth="142.4000244140625" text="Total Passengers" />
+            <TableColumn fx:id="revenueCol" prefWidth="131.199951171875" text="Revenue" />
+        </columns>
+      </TableView>
+      <Button layoutX="568.0" layoutY="427.0" mnemonicParsing="false" onAction="#backToDashboardCol" text="Back to Dashboard" />
+   </children>
+</AnchorPane>

@@ -5,6 +5,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 
 public class Goal4Controller
@@ -25,6 +26,8 @@ public class Goal4Controller
     private TableView reportTV;
     @javafx.fxml.FXML
     private TableColumn paymentMethodType;
+    @javafx.fxml.FXML
+    private Label paymentReportL;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -36,5 +39,9 @@ public class Goal4Controller
 
     @javafx.fxml.FXML
     public void generateReportOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backToDashboardOA(ActionEvent actionEvent) {
     }
 }

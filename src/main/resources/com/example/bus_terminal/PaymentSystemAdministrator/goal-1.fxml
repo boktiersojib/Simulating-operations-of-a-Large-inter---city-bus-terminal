@@ -5,12 +5,12 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PaymentSystemAdministrator.Goal1Controller">
    <children>
-      <Label layoutX="82.0" layoutY="51.0" text="Edit" />
-      <ComboBox fx:id="editCB" layoutX="121.0" layoutY="47.0" prefWidth="150.0" />
+      <Label layoutX="82.0" layoutY="73.0" text="Edit" />
+      <ComboBox fx:id="editCB" layoutX="136.0" layoutY="69.0" prefWidth="150.0" />
       <Label layoutX="68.0" layoutY="107.0" text=" API keys" />
       <Label layoutX="68.0" layoutY="145.0" text=" Merchant ID" />
       <Label layoutX="340.0" layoutY="107.0" text="URL" />
@@ -22,5 +22,11 @@
       <TextField fx:id="credentialsTF" layoutX="411.0" layoutY="141.0" />
       <Button layoutX="261.0" layoutY="200.0" mnemonicParsing="false" onAction="#saveOA" text="Save" />
       <Label fx:id="outputL" layoutX="140.0" layoutY="250.0" prefHeight="68.0" prefWidth="318.0" />
+      <Label fx:id="managePaymentGatewayL" layoutX="200.0" layoutY="25.0" text="Manage Payment Gateways">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="417.0" layoutY="340.0" mnemonicParsing="false" onAction="#backToDashboardOA" text="Back to Dashboard" />
    </children>
 </AnchorPane>

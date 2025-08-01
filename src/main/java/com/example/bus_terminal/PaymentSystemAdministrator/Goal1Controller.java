@@ -20,6 +20,8 @@ public class Goal1Controller
     private Label outputL;
     @javafx.fxml.FXML
     private TextField merchantIdTF;
+    @javafx.fxml.FXML
+    private Label managePaymentGatewayL;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -27,5 +29,9 @@ public class Goal1Controller
 
     @javafx.fxml.FXML
     public void saveOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backToDashboardOA(ActionEvent actionEvent) {
     }
 }
