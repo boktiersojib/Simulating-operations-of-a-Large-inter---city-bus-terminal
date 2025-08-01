@@ -36,7 +36,7 @@ public class Goal8Controller
     public void closeCaseOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void openCaseDetailesOA(ActionEvent actionEvent) {
     }
 }
