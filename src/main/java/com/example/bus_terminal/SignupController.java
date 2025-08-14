@@ -1,12 +1,7 @@
 package com.example.bus_terminal;
 
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.RadioButton;
-
-import java.awt.*;
-import java.awt.event.ActionEvent;
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
 
 public class SignupController
 {
@@ -38,9 +33,6 @@ public class SignupController
     }
 
     @javafx.fxml.FXML
-    public void signuUpBOA(ActionEvent actionEvent) {
-
-
-
+    public void signUpBOA(ActionEvent actionEvent) {
     }
 }

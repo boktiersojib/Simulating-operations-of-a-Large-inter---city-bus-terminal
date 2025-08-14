@@ -36,7 +36,7 @@
       <RadioButton fx:id="othersRB" layoutX="651.0" layoutY="75.0" mnemonicParsing="false" text="Others" />
       <PasswordField fx:id="passwordF" layoutX="504.0" layoutY="114.0" prefHeight="26.0" prefWidth="141.0" />
       <ComboBox fx:id="selectAccountTypeCB" layoutX="512.0" layoutY="167.0" prefHeight="26.0" prefWidth="150.0" />
-      <Button layoutX="400.0" layoutY="253.0" mnemonicParsing="false" onAction="#signuUpBOA" text="Sign Up" />
+      <Button layoutX="400.0" layoutY="253.0" mnemonicParsing="false" onAction="#signUpBOA" text="Sign Up" />
       <TextArea fx:id="outputTA" layoutX="127.0" layoutY="310.0" prefHeight="71.0" prefWidth="547.0" />
    </children>
 </AnchorPane>
