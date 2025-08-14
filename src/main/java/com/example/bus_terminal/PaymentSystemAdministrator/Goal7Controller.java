@@ -28,6 +28,9 @@ public class Goal7Controller
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        gatewayCB.getItems().addAll(
+                "PayPal", "Stripe", "Bkash", "Rocket", "Credit Card");
     }
 
     @javafx.fxml.FXML

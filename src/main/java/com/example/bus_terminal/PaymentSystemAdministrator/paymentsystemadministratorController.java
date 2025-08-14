@@ -14,6 +14,26 @@ public class paymentsystemadministratorController
 
     @javafx.fxml.FXML
     public void initialize() {
+            // Set a welcome message
+            infoTA.setText(
+                    "Welcome to the Payment System Administrator Dashboard.\n\n" +
+                            "Available Actions:\n" +
+                            "1. Manage Payment Methods\n" +
+                            "2. Process Refund Requests\n" +
+                            "3. Review Payment Logs\n" +
+                            "4. Manage Payment Gateways\n" +
+                            "5. Monitor Transactions\n" +
+                            "6. Resolve Failed Transactions\n" +
+                            "7. Fraud Detection\n" +
+                            "8. Generate Reports\n\n" +
+                            "Please select an action from the menu."
+            );
+
+            infoTA.setEditable(false);
+
+
+
+
     }
 
     @javafx.fxml.FXML

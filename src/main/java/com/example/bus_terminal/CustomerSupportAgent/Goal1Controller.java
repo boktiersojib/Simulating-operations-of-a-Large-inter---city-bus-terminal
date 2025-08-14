@@ -25,6 +25,7 @@ public class Goal1Controller
 
     @javafx.fxml.FXML
     public void initialize() {
+
     }
 
     @javafx.fxml.FXML

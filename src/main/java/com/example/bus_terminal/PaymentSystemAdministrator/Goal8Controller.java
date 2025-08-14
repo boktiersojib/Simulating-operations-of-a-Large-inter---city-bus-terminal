@@ -28,6 +28,9 @@ public class Goal8Controller
 
     @javafx.fxml.FXML
     public void initialize() {
+        escalationCB.getItems().addAll(
+                 "Select Action", "Mark as Valid", "Mark as Suspicious", "Block Transaction", "Refund Transaction",
+                "Escalate to Manager", "Escalate to Fraud Department", "Notify Customer");
     }
 
     @javafx.fxml.FXML

@@ -28,6 +28,8 @@ public class Goal5Controller
 
     @javafx.fxml.FXML
     public void initialize() {
+        ststusCB.getItems().addAll(
+                "Pending", "Approved", "Rejected", "Processing", "Completed");
     }
 
     @javafx.fxml.FXML

@@ -33,6 +33,8 @@ public class Goal6Controller
 
     @javafx.fxml.FXML
     public void initialize() {
+        methodNameCB.getItems().addAll(
+                "Bkash", "Rocket", "Nagad", "Upay", "Credit card", "Google pay");
     }
 
     @Deprecated

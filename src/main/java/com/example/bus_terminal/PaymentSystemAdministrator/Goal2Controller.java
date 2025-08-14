@@ -26,6 +26,12 @@ public class Goal2Controller
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        paymentMethodCB.getItems().addAll(
+                " Bkash", " Rocket", "Nagad", " Upay", " Credit Card", "Google pay");
+
+        statusCB.getItems().addAll(
+                "Pending", " Confirmed", " Cancelled");
     }
 
     @javafx.fxml.FXML
