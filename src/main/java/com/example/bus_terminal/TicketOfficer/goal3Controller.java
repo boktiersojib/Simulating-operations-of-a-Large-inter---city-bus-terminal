@@ -8,13 +8,13 @@ import javafx.scene.control.TextField;
 public class goal3Controller
 {
     @javafx.fxml.FXML
-    private TableColumn busCol;
+    private TableColumn<TicketOfficer, String> busCol;
     @javafx.fxml.FXML
-    private TableColumn passengerNameCol;
+    private TableColumn<TicketOfficer, String> passengerNameCol;
     @javafx.fxml.FXML
     private TextField enterBookingReferenceTF;
     @javafx.fxml.FXML
-    private TableColumn dateCol;
+    private TableColumn<TicketOfficer, String> dateCol;
     @javafx.fxml.FXML
     private TableColumn routeCol;
     @javafx.fxml.FXML

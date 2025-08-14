@@ -46,6 +46,7 @@ public class SignupController
 
     @javafx.fxml.FXML
     public void signuUpBOA(ActionEvent actionEvent) {
+<<<<<<< HEAD
         String name, email, phoneNo, gender = "", password, address;
         LocalDate dob;
 
@@ -97,6 +98,8 @@ public class SignupController
 
 
 
+=======
+>>>>>>> c48b60e14a933d9fdf034bb3fd71905559d06516
 
 
 
