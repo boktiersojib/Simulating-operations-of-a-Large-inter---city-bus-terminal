@@ -10,6 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 
+<?import javafx.scene.control.TextField?>
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.CustomerSupportAgent.Goal2Controller">
    <children>
       <Label fx:id="refundAssistancePanalL" layoutX="222.0" layoutY="25.0" text=" Refund Assistance Panal">
@@ -32,7 +33,7 @@
       <Button layoutX="492.0" layoutY="222.0" mnemonicParsing="false" onAction="#sendsPolicyInfoOA" text="Sends policy info" />
       <Button layoutX="616.0" layoutY="223.0" mnemonicParsing="false" onAction="#initiateRefundProcessOA" text="Initiates refund process" />
       <Label layoutX="76.0" layoutY="297.0" text="Update Passenger" />
-      <TextField fx:id="updatePassengerTF" layoutX="196.0" layoutY="293.0" />
+      <TextField layoutX="196.0" layoutY="293.0" />
       <Button layoutX="432.0" layoutY="293.0" mnemonicParsing="false" onAction="#sendOA" text="Send" />
       <Button layoutX="554.0" layoutY="293.0" mnemonicParsing="false" onAction="#closeOA" text="Close" />
       <Button layoutX="634.0" layoutY="391.0" mnemonicParsing="false" onAction="#backToDashboardOA" text="Back to Dashboard" />

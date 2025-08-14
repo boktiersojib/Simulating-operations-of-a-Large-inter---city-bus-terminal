@@ -2,15 +2,19 @@ package com.example.bus_terminal;
 
 import java.time.LocalDate;
 
-public class User {
-    private String name, phoneNo, email, address,gender, password;
+public abstract class User {
+    private String name;
+    private String phoneNo;
+    private String email;
+    private String gender;
+    private String password;
     private LocalDate dob;
+    private String address;
 
     public User(String name, String phoneNo, String email, String address, String gender, String password, LocalDate dob) {
         this.name = name;
         this.phoneNo = phoneNo;
         this.email = email;
-        this.address = address;
         this.gender = gender;
         this.password = password;
         this.dob = dob;
@@ -41,7 +45,7 @@ public class User {
         this.email = email;
     }
 
-    public String getAddress() {
+    public String getAddress(String address){
         return address;
     }
 
@@ -85,4 +89,11 @@ public class User {
                 ", dob=" + dob +
                 '}';
     }
+
+
+
+    public abstract String generateID();
+    public abstract boolean login (String id, String password);
+
+
 }

@@ -31,6 +31,9 @@ public class Goal4Controller
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        reportTypeCB.getItems().addAll(
+                "Daily", "Weakly", "Monthly");
     }
 
     @javafx.fxml.FXML

@@ -38,6 +38,17 @@ public class Goal3Controller
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        transactionCB.getItems().addAll(
+                " Ticket purchase", "Ticket Cancellation", "Refund", "Rescheduling Fee");
+
+        statusCB.getItems().addAll(
+                "Pending", " Confirmed", " Cancelled");
+
+        methodCB.getItems().addAll(
+                " Bkash", " Rocket", "Nagad", " Upay", " Credit Card", "Google pay");
+
+
     }
 
     @javafx.fxml.FXML

@@ -14,6 +14,20 @@ public class customersupportagentController
 
     @javafx.fxml.FXML
     public void initialize() {
+            infoTA.setText(
+                    "Welcome to the Customer Support Agent Dashboard!\n\n" +
+                            "Available Operations:\n" +
+                            "• Handle Queries\n" +
+                            "• Handle Ticket Issues\n" +
+                            "• Live Chat\n" +
+                            "• Support Website Issues\n" +
+                            "• Refund Assistance\n" +
+                            "• Passenger Complaint Logging\n" +
+                            "• Schedule and Route Enquiries\n\n" +
+                            "Select an action from the menu or use the buttons to begin."
+            );
+
+
     }
 
     @Deprecated

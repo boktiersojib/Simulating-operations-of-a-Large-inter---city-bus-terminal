@@ -27,6 +27,9 @@ public class Goal2Controller
 
     @javafx.fxml.FXML
     public void initialize() {
+        System.out.println("Verify button clicked");
+        // Add logic for verifying the refund request
+
     }
 
     @javafx.fxml.FXML

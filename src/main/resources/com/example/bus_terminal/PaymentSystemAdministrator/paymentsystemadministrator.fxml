@@ -37,6 +37,7 @@
       <VBox prefHeight="480.0" prefWidth="312.0" style="-fx-background-color: rgb(100, 100, 100, 10;" BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" onAction="#managePaymentGatewayOA" prefHeight="26.0" prefWidth="312.0" text="Manage Payment Gateways" />
+            <Button layoutX="10.0" layoutY="195.0" mnemonicParsing="false" onAction="#signOutOA" prefHeight="26.0" prefWidth="312.0" text="Sign Out" />
             <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#monitorTransactionsOA" prefHeight="26.0" prefWidth="312.0" text="Monitor Transactions" />
             <Button layoutX="10.0" layoutY="36.0" mnemonicParsing="false" onAction="#resolveFailedTransactinOA" prefHeight="26.0" prefWidth="312.0" text="Resolve Failed Transactions" />
             <Button layoutX="10.0" layoutY="63.0" mnemonicParsing="false" onAction="#generateReportsOA" prefHeight="26.0" prefWidth="312.0" text="Generate Reports" />
@@ -44,7 +45,6 @@
             <Button layoutX="10.0" layoutY="116.0" mnemonicParsing="false" onAction="#managePaymentMethodsOA" prefHeight="26.0" prefWidth="312.0" text="Manage Payment Methods" />
             <Button layoutX="10.0" layoutY="142.0" mnemonicParsing="false" onAction="#reviewPaymentLogsOA" prefHeight="26.0" prefWidth="312.0" text="Review Payment Logs" />
             <Button layoutX="10.0" layoutY="168.0" mnemonicParsing="false" onAction="#fraudDetectionOA" prefHeight="26.0" prefWidth="312.0" text="Fraud Detection" />
-            <Button layoutX="10.0" layoutY="195.0" mnemonicParsing="false" onAction="#signOutOA" prefHeight="26.0" prefWidth="312.0" text="Sign Out" />
          </children>
       </VBox>
    </left>
