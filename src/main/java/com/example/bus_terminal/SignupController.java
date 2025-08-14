@@ -39,5 +39,8 @@ public class SignupController
 
     @javafx.fxml.FXML
     public void signuUpBOA(ActionEvent actionEvent) {
+
+
+
     }
 }
