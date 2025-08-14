@@ -1,26 +1,25 @@
-package com.example.bus_terminal.BusDriver;
+package com.example.bus_terminal.Passenger;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
-public class Goal5Controller
+public class Goal8Controller
 {
     @javafx.fxml.FXML
-    private ComboBox SelectTripComboBox;
+    private TextField EditEmailTextField;
     @javafx.fxml.FXML
-    private TextField AmountFuelTextField;
+    private TextField EditAgeTextField;
     @javafx.fxml.FXML
-    private TextField AmountCostTextFIeld;
+    private TextField EditPhoneTextField;
     @javafx.fxml.FXML
-    private TextField IncidentReportTextField;
+    private TextField EditNAmeTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void SubmitButtonOnAction(ActionEvent actionEvent) {
+    public void SaveOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

@@ -1,5 +1,9 @@
 package com.example.bus_terminal.BusDriver;
 
+
+
+import javafx.event.ActionEvent;
+
 import javafx.scene.control.*;
 
 public class Goal2Controller
@@ -23,4 +27,9 @@ public class Goal2Controller
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void BackToDashBoardOnAction(ActionEvent actionEvent) {
+    }
+}

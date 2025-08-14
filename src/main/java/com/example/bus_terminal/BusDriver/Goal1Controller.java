@@ -40,4 +40,8 @@ public class Goal1Controller
     @javafx.fxml.FXML
     public void SearchOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void BacktoDashBoardOnAction(ActionEvent actionEvent) {
+    }
 }

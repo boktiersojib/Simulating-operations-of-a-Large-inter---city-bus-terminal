@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.Passenger.Goal7Controller">
+   <children>
+      <Label layoutX="46.0" layoutY="81.0" text="Booking Id:" />
+      <Label layoutX="409.0" layoutY="81.0" text="Transation No:" />
+      <Label layoutX="46.0" layoutY="115.0" text="Name:" />
+      <Label layoutX="411.0" layoutY="115.0" text="Phone:" />
+      <TextField fx:id="BookingIdTextField" layoutX="137.0" layoutY="77.0" />
+      <TextField fx:id="NameTextField" layoutX="138.0" layoutY="111.0" />
+      <TextField fx:id="TransationNoTextField" layoutX="517.0" layoutY="77.0" />
+      <TextField fx:id="PhoneTextField" layoutX="517.0" layoutY="111.0" />
+      <Button layoutX="409.0" layoutY="167.0" mnemonicParsing="false" onAction="#ConfirmOnAction" text="Confirm" />
+      <Label layoutX="46.0" layoutY="171.0" text="Refund Reason:" />
+      <ComboBox fx:id="RefundReasonComboBox" layoutX="137.0" layoutY="167.0" prefWidth="150.0" />
+      <Label fx:id="outputLabel" layoutX="138.0" layoutY="257.0" prefHeight="102.0" prefWidth="485.0" />
+      <Label layoutX="246.0" layoutY="14.0" text="Refund Request">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="649.0" layoutY="395.0" mnemonicParsing="false" onAction="#BackToDashBoardOnAction" text="Back To DashBoard" />
+   </children>
+</AnchorPane>

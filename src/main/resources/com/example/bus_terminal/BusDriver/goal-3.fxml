@@ -4,15 +4,21 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="457.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.BusDriver.Goal3Controller">
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.BusDriver.Goal3Controller">
    <children>
-      <Button layoutX="80.0" layoutY="187.0" mnemonicParsing="false" onAction="#StarTripOnAction" text="Start Trip" />
-      <Label layoutX="80.0" layoutY="63.0" text="Time:" />
-      <Label layoutX="80.0" layoutY="114.0" text="Location:" />
-      <TextField fx:id="TimeTextField" layoutX="141.0" layoutY="59.0" />
-      <TextField fx:id="LocationTextField" layoutX="142.0" layoutY="110.0" />
+      <Button layoutX="333.0" layoutY="225.0" mnemonicParsing="false" onAction="#StarTripOnAction" text="Start Trip" />
+      <Label layoutX="81.0" layoutY="154.0" text="Time:" />
+      <Label layoutX="430.0" layoutY="154.0" text="Location:" />
+      <TextField fx:id="TimeTextField" layoutX="123.0" layoutY="150.0" />
+      <TextField fx:id="LocationTextField" layoutX="513.0" layoutY="150.0" />
       <Label fx:id="outputLabel" layoutX="333.0" layoutY="50.0" prefHeight="85.0" prefWidth="270.0" />
+      <Label layoutX="134.0" layoutY="33.0" text="Starts the trip after trip departure">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="637.0" layoutY="380.0" mnemonicParsing="false" text="Back To DashBoard" />
    </children>
 </AnchorPane>
