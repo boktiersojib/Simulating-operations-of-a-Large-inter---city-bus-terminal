@@ -1,9 +1,14 @@
 package com.example.bus_terminal.BusDriver;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class busdriverController
 {
@@ -20,10 +25,12 @@ public class busdriverController
 
     @javafx.fxml.FXML
     public void SingoutOnActionOnAction(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML
-    public void UpdatetripstatusOnAction(ActionEvent actionEvent) {
+    public void UpdatetripstatusOnAction(ActionEvent actionEvent)  {
+
     }
 
     @javafx.fxml.FXML
