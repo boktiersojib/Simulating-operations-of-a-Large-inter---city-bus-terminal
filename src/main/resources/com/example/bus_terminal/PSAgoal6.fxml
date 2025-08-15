@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="548.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PaymentSystemAdministrator.Goal6Controller">
+<AnchorPane prefHeight="548.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PSAGoal6Controller">
    <children>
       <Label layoutX="441.0" layoutY="98.0" text="Method Name" />
       <Label layoutX="60.0" layoutY="89.0" text="Toggle switch" />

@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.CustomerSupportAgent.Goal4Controller">
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.CSAGoal4Controller">
    <children>
       <Label fx:id="supportAppIssueL" layoutX="250.0" layoutY="25.0" prefHeight="27.0" prefWidth="300.0" text="Support App/Website Issues">
          <font>

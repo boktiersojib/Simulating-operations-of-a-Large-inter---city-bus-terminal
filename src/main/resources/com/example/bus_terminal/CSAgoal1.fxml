@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.CustomerSupportAgent.Goal1Controller">
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.CSAGoal1Controller">
    <children>
       <Label fx:id="handleQueriesL" layoutX="205.0" layoutY="24.0" text="Handle Booking/Schedule/Payment Queries">
          <font>

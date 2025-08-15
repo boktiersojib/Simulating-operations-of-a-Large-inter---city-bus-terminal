@@ -11,7 +11,7 @@
 
 
 <?import javafx.scene.control.TextField?>
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.CustomerSupportAgent.Goal2Controller">
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.CSAGoal2Controller">
    <children>
       <Label fx:id="refundAssistancePanalL" layoutX="222.0" layoutY="25.0" text=" Refund Assistance Panal">
          <font>

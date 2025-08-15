@@ -2,6 +2,7 @@ package com.example.bus_terminal;
 
 import com.example.bus_terminal.BookingData;
 import com.example.bus_terminal.model.Booking;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -35,5 +36,9 @@ public class TO_goal5Controller {
         } else {
             statusAndUpdatesTA.setText("Please select a booking to cancel.");
         }
+    }
+
+    public void searchOA(ActionEvent actionEvent) {
+
     }
 }

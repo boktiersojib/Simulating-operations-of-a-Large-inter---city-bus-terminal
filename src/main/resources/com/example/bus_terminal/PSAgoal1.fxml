@@ -7,7 +7,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PaymentSystemAdministrator.Goal1Controller">
+<?import javafx.scene.control.TextField?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PSAGoal1Controller">
    <children>
       <Label layoutX="82.0" layoutY="73.0" text="Edit" />
       <ComboBox fx:id="editCB" layoutX="136.0" layoutY="69.0" prefWidth="150.0" />
@@ -16,7 +17,7 @@
       <Label layoutX="340.0" layoutY="107.0" text="URL" />
       <Label layoutX="340.0" layoutY="145.0" />
       <Label layoutX="337.0" layoutY="145.0" text="Credentials" />
-      <TextField fx:id="apiKeysTF" layoutX="137.0" layoutY="103.0" />
+      <TextField layoutX="137.0" layoutY="103.0" />
       <TextField fx:id="merchantIdTF" layoutX="138.0" layoutY="141.0" />
       <TextField fx:id="urlTF" layoutX="387.0" layoutY="103.0" />
       <TextField fx:id="credentialsTF" layoutX="411.0" layoutY="141.0" />

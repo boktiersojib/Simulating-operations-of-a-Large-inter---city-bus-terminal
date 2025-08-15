@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PaymentSystemAdministrator.Goal7Controller">
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PSAGoal7Controller">
    <children>
       <Button layoutX="391.0" layoutY="146.0" mnemonicParsing="false" onAction="#searchOA" text="Search" />
       <TableView fx:id="paymentLogsTV" layoutX="70.0" layoutY="185.0" prefHeight="200.0" prefWidth="418.0">
@@ -25,10 +25,10 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="70.0" layoutY="71.0" text="Date Range" />
+      <Label fx:id="d" layoutX="70.0" layoutY="71.0" text="Date " />
       <Label layoutX="73.0" layoutY="108.0" text="Gateway" />
       <Label layoutX="362.0" layoutY="71.0" text="User Name" />
-      <DatePicker fx:id="dateRangeDP" layoutX="135.0" layoutY="67.0" />
+      <DatePicker fx:id="dateDP" layoutX="135.0" layoutY="67.0" />
       <ComboBox fx:id="gatewayCB" layoutX="135.0" layoutY="105.0" prefWidth="150.0" />
       <TextField fx:id="userNmaeTF" layoutX="443.0" layoutY="67.0" />
       <Button layoutX="533.0" layoutY="199.0" mnemonicParsing="false" onAction="#markReviewOA" text="Mark Review" />

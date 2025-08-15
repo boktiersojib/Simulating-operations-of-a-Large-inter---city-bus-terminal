@@ -1,6 +1,7 @@
 package com.example.bus_terminal;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import javafx.event.ActionEvent;
 =======
 import com.example.bus_terminal.PaymentSystemAdministrator.PaymentSystemAdministrator;
@@ -10,103 +11,114 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+=======
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+>>>>>>> 8048ffea2334e2bcfd339907e208c5b2a3f2abf1
 
 import java.time.LocalDate;
 
-public class SignupController
-{
-    @javafx.fxml.FXML
-    private TextArea outputTA;
-    @javafx.fxml.FXML
-    private TextArea addressTA;
-    @javafx.fxml.FXML
-    private RadioButton othersRB;
-    @javafx.fxml.FXML
-    private TextField nameTF;
-    @javafx.fxml.FXML
-    private ComboBox<String> selectAccountTypeCB;
-    @javafx.fxml.FXML
-    private TextField emailTF;
-    @javafx.fxml.FXML
-    private RadioButton maleRB;
-    @javafx.fxml.FXML
-    private TextField phoneNoTF;
-    @javafx.fxml.FXML
-    private DatePicker dobDP;
-    @javafx.fxml.FXML
-    private PasswordField passwordF;
-    @javafx.fxml.FXML
-    private RadioButton femaleRB;
+public class SignupController {
 
-    @javafx.fxml.FXML
+    @FXML
+    private TextField nameTF;
+    @FXML
+    private TextField emailTF;
+    @FXML
+    private TextField phoneNoTF;
+
+
+    @FXML
+    private DatePicker dobDP;
+
+    @FXML
+    private TextArea addressTA;
+    @FXML
+    private TextArea outputTA;
+
+
+    @FXML
+    private RadioButton maleRB;
+    @FXML
+    private RadioButton femaleRB;
+    @FXML
+    private RadioButton othersRB;
+    @FXML
+    private PasswordField passwordF;
+
+
+    @FXML
+    private ComboBox<String> selectAccountTypeCB;
+
+
+    private ToggleGroup genderGroup;
+
+    @FXML
     public void initialize() {
-        selectAccountTypeCB.getItems().addAll("Passenger", "Bus Driver", "Ticket Officer", "Terminal Manager", "Payment System Administrator",
-                "Customer Support Agent"
-        );
+        selectAccountTypeCB.getItems().addAll("Passenger", "Bus Driver", "Ticket Officer",
+                "Terminal Manager", "Payment System Administrator", "Customer Support Agent");
+
+        genderGroup = new ToggleGroup();
+        maleRB.setToggleGroup(genderGroup);
+        femaleRB.setToggleGroup(genderGroup);
+        othersRB.setToggleGroup(genderGroup);
     }
 
-    @javafx.fxml.FXML
-<<<<<<< HEAD
-    public void signUpBOA(ActionEvent actionEvent) {
-=======
-    public void signuUpBOA(ActionEvent actionEvent) {
-<<<<<<< HEAD
-        String name, email, phoneNo, gender = "", password, address;
-        LocalDate dob;
+    @FXML
+    public void signUpBOA() {
+        outputTA.clear();
 
-        boolean flag = true;
-
-        name = nameTF.getText();
-        email = emailTF.getText();
-        phoneNo = phoneNoTF.getText();
-        address = addressTA.getText();
-        password = passwordF.getText();
-        dob = dobDP.getValue();
-
-
-        if (maleRB.isSelected()) {
-            gender = "Male";
-        }
-
-        else if (femaleRB.isSelected()) {
-             gender= "Female";
-        }
-        else if (othersRB.isSelected()) {
-            gender = "Others";
-        }
-        PaymentSystemAdministrator PaymentSystemAdministrator = new PaymentSystemAdministrator();
-
+        String fullName = nameTF.getText().trim();
+        String email = emailTF.getText().trim();
+        String phone = phoneNoTF.getText().trim();
+        LocalDate dob = dobDP.getValue();
+        String address = addressTA.getText().trim();
+        String password = passwordF.getText();
         String accountType = selectAccountTypeCB.getValue();
 
-        if (name.isEmpty() || email.isEmpty() || phoneNo.isEmpty() || gender.isEmpty() || accountType == null) {
-            outputTA.setText("Please fill in all required fields.");
+        RadioButton selectedGenderRB = (RadioButton) genderGroup.getSelectedToggle();
+        String gender = selectedGenderRB != null ? selectedGenderRB.getText() : "";
+
+        if (fullName.isEmpty() || email.isEmpty() || phone.isEmpty() ||
+                dob == null || address.isEmpty() || password.isEmpty() ||
+                accountType == null || gender.isEmpty()) {
+            outputTA.setText("Please fill in all fields and select gender/account type.");
             return;
         }
 
-        
+        if (!email.contains("@") || !email.contains(".")) {
+            outputTA.setText("Please enter a valid email.");
+            return;
+        }
 
+        if (!phone.matches("\\d{10,15}")) {
+            outputTA.setText("Please enter a valid phone number (10-15 digits).");
+            return;
+        }
 
-        outputTA.clear();
-        outputTA.setText(
-                "Name: " + name + "\n" + "Phone: " + phoneNo + "\n" + "DOB: " + dob + "\n" + "Gender: " + gender + "\n" +
-                        "Address: " + address + "\n" +
-                        "Account Type: " + accountType + "\n" +
-                        "Password: " + password
-        );
+        StringBuilder sb = new StringBuilder();
+        sb.append("Sign Up Successful!\n");
+        sb.append("Name: ").append(fullName).append("\n");
+        sb.append("Email: ").append(email).append("\n");
+        sb.append("Phone: ").append(phone).append("\n");
+        sb.append("DOB: ").append(dob).append("\n");
+        sb.append("Address: ").append(address).append("\n");
+        sb.append("Gender: ").append(gender).append("\n");
+        sb.append("Account Type: ").append(accountType).append("\n");
 
+        outputTA.setText(sb.toString());
 
+        clearFields();
+    }
 
-
-
-
-
-
-
-=======
->>>>>>> c48b60e14a933d9fdf034bb3fd71905559d06516
-
-
-
->>>>>>> a7b4cab4a1bfe746f5f295b04bd5d60ea3c2e5cf
+    private void clearFields() {
+        nameTF.clear();
+        emailTF.clear();
+        phoneNoTF.clear();
+        dobDP.setValue(null);
+        addressTA.clear();
+        passwordF.clear();
+        selectAccountTypeCB.getSelectionModel().clearSelection();
+        genderGroup.selectToggle(null);
     }
 }
