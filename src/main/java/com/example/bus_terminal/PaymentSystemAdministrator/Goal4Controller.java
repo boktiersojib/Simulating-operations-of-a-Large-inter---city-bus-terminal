@@ -1,50 +1,107 @@
 package com.example.bus_terminal.PaymentSystemAdministrator;
 
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import com.example.bus_terminal.model.PaymentReport;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.awt.*;
-import java.awt.event.ActionEvent;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Goal4Controller
-{
-    @javafx.fxml.FXML
-    private TableColumn amountTC;
-    @javafx.fxml.FXML
-    private TextField dateRangeTF;
-    @javafx.fxml.FXML
-    private TableColumn transactionIdTC;
-    @javafx.fxml.FXML
-    private ComboBox reportTypeCB;
-    @javafx.fxml.FXML
-    private TableColumn dateTC;
-    @javafx.fxml.FXML
-    private TableColumn reportTypeTC;
-    @javafx.fxml.FXML
-    private TableView reportTV;
-    @javafx.fxml.FXML
-    private TableColumn paymentMethodType;
-    @javafx.fxml.FXML
+public class Goal4Controller {
+
+    @FXML
+    private ComboBox<String> reportTypeCB;
+
+    @FXML
+    private TableView<PaymentReport> reportTV;
+
+    @FXML
+    private TableColumn<PaymentReport, String> transactionIdTC;
+
+    @FXML
+    private TableColumn<PaymentReport, LocalDate> dateTC;
+
+    @FXML
+    private TableColumn<PaymentReport, Double> amountTC;
+
+    @FXML
+    private TableColumn<PaymentReport, String> reportTypeTC;
+
+    @FXML
+    private TableColumn<PaymentReport, String> paymentMethodType;
+
+    @FXML
     private Label paymentReportL;
 
-    @javafx.fxml.FXML
+    private ObservableList<PaymentReport> reports;
+
+    @FXML
     public void initialize() {
+        // Sample report types
+        reportTypeCB.setItems(FXCollections.observableArrayList("Daily", "Monthly", "Yearly"));
 
-        reportTypeCB.getItems().addAll(
-                "Daily", "Weakly", "Monthly");
+        List<PaymentReport> reports = new ArrayList<>();
+
+        reports.add(new PaymentReport("TXN001", LocalDate.of(2025, 8, 1), 100.0, "Daily", "Credit Card"));
+        reports.add(new PaymentReport("TXN002", LocalDate.of(2025, 8, 2), 200.0, "Monthly", "PayPal"));
+        reports.add(new PaymentReport("TXN003", LocalDate.of(2025, 8, 3), 150.0, "Yearly", "Bkash"));
+
+        // Set TableView columns
+        transactionIdTC.setCellValueFactory(new PropertyValueFactory<>("transactionId"));
+        dateTC.setCellValueFactory(new PropertyValueFactory<>("date"));
+        amountTC.setCellValueFactory(new PropertyValueFactory<>("amount"));
+        reportTypeTC.setCellValueFactory(new PropertyValueFactory<>("reportType"));
+        paymentMethodType.setCellValueFactory(new PropertyValueFactory<>("paymentMethod"));
+
+        // Populate TableView
+        reportTV.setItems(reports);
     }
 
-    @javafx.fxml.FXML
-    public void downloadReportOA(ActionEvent actionEvent) {
+    @FXML
+    public void generateReportOA() {
+        String selectedReportType = reportTypeCB.getValue();
+        if (selectedReportType == null) {
+            showAlert("Error", "Please select a report type!");
+            return;
+        }
+
+        ObservableList<PaymentReport> filtered = FXCollections.observableArrayList();
+
+        for (PaymentReport r : reports) {
+            if (r.getReportType().equals(selectedReportType)) {
+                filtered.add(r);
+            }
+        }
+
+        reportTV.setItems(filtered);
+        showAlert("Report Generated", selectedReportType + " report generated successfully!");
     }
 
-    @javafx.fxml.FXML
-    public void generateReportOA(ActionEvent actionEvent) {
+    @FXML
+    public void downloadReportOA() {
+        PaymentReport selected = reportTV.getSelectionModel().getSelectedItem();
+        if (selected != null) {
+            showAlert("Download Report", "Report for Transaction " + selected.getTransactionId() + " downloaded!");
+        } else {
+            showAlert("Error", "Select a report to download.");
+        }
     }
 
-    @javafx.fxml.FXML
-    public void backToDashboardOA(ActionEvent actionEvent) {
+    @FXML
+    public void backToDashboardOA() {
+        System.out.println("Back to Dashboard clicked");
+        // TODO: Implement scene switch logic
+    }
+
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }

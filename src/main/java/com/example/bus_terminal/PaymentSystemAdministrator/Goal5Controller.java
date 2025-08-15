@@ -1,50 +1,119 @@
+
 package com.example.bus_terminal.PaymentSystemAdministrator;
 
-import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import com.example.bus_terminal.model.RefundRequest;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.awt.*;
+import java.time.LocalDate;
 
-public class Goal5Controller
-{
-    @javafx.fxml.FXML
-    private Label notifyPassengerL;
-    @javafx.fxml.FXML
-    private TableColumn passengerNameTC;
-    @javafx.fxml.FXML
-    private TableColumn statusTC;
-    @javafx.fxml.FXML
+public class Goal5Controller {
+
+    @FXML
     private TextField bookingIdTF;
-    @javafx.fxml.FXML
-    private TableColumn bookingIdTC;
-    @javafx.fxml.FXML
-    private TableColumn dateTC;
-    @javafx.fxml.FXML
-    private ComboBox ststusCB;
-    @javafx.fxml.FXML
-    private TableView paymentTV;
 
-    @javafx.fxml.FXML
+    @FXML
+    private ComboBox<String> ststusCB;
+
+    @FXML
+    private TableView<RefundRequest> paymentTV;
+
+    @FXML
+    private TableColumn<RefundRequest, String> statusTC;
+
+    @FXML
+    private TableColumn<RefundRequest, String> bookingIdTC;
+
+    @FXML
+    private TableColumn<RefundRequest, String> passengerNameTC;
+
+    @FXML
+    private TableColumn<RefundRequest, LocalDate> dateTC;
+
+    @FXML
+    private Label notifyPassengerL;
+
+    private ObservableList<RefundRequest> refundRequests;
+
+    @FXML
     public void initialize() {
-        ststusCB.getItems().addAll(
-                "Pending", "Approved", "Rejected", "Processing", "Completed");
+
+        ststusCB.setItems(FXCollections.observableArrayList("Pending", "Approved", "Rejected"));
+
+        refundRequests = FXCollections.observableArrayList(
+                new RefundRequest("Pending", "B001", "Alice", LocalDate.of(2025, 8, 1)),
+                new RefundRequest("Pending", "B002", "Bob", LocalDate.of(2025, 8, 2)),
+                new RefundRequest("Approved", "B003", "Charlie", LocalDate.of(2025, 8, 3))
+        );
+
+        statusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
+        bookingIdTC.setCellValueFactory(new PropertyValueFactory<>("bookingId"));
+        passengerNameTC.setCellValueFactory(new PropertyValueFactory<>("passengerName"));
+        dateTC.setCellValueFactory(new PropertyValueFactory<>("date"));
+
+        paymentTV.setItems(refundRequests);
     }
 
-    @javafx.fxml.FXML
-    public void approveOA(ActionEvent actionEvent) {
+    @FXML
+    public void searchOA() {
+        String bookingId = bookingIdTF.getText();
+        String selectedStatus = ststusCB.getValue();
+
+        ObservableList<RefundRequest> filtered = FXCollections.observableArrayList();
+
+        for (RefundRequest r : refundRequests) {
+            boolean matches = true;
+            if (bookingId != null && !bookingId.isEmpty() && !r.getBookingId().equals(bookingId)) {
+                matches = false;
+            }
+            if (selectedStatus != null && !selectedStatus.isEmpty() && !r.getStatus().equals(selectedStatus)) {
+                matches = false;
+            }
+            if (matches) {
+                filtered.add(r);
+            }
+        }
+
+        paymentTV.setItems(filtered);
     }
 
-    @javafx.fxml.FXML
-    public void rejectOA(ActionEvent actionEvent) {
+    @FXML
+    public void approveOA() {
+        RefundRequest selected = paymentTV.getSelectionModel().getSelectedItem();
+        if (selected != null) {
+            selected.setStatus("Approved");
+            paymentTV.refresh();
+            showAlert("Approved", "Refund request approved for Booking ID: " + selected.getBookingId());
+        } else {
+            showAlert("Error", "Select a refund request to approve.");
+        }
     }
 
-    @javafx.fxml.FXML
-    public void searchOA(ActionEvent actionEvent) {
+    @FXML
+    public void rejectOA() {
+        RefundRequest selected = paymentTV.getSelectionModel().getSelectedItem();
+        if (selected != null) {
+            selected.setStatus("Rejected");
+            paymentTV.refresh();
+            showAlert("Rejected", "Refund request rejected for Booking ID: " + selected.getBookingId());
+        } else {
+            showAlert("Error", "Select a refund request to reject.");
+        }
     }
 
-    @javafx.fxml.FXML
-    public void backToDashboardOA(ActionEvent actionEvent) {
+    @FXML
+    public void backToDashboardOA() {
+        System.out.println("Back to Dashboard clicked");
+    }
+
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }
