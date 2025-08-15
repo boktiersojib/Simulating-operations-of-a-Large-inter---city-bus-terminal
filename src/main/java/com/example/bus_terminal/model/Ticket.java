@@ -30,35 +30,104 @@ public class Ticket {
         this.amount = amount;
     }
 
-    // Getters and Setters
-    public String getPassengerName() { return passengerName; }
-    public void setPassengerName(String passengerName) { this.passengerName = passengerName; }
+    public Ticket(String t001, String bookingIssue, String pending, String ref123) {
+    }
 
-    public String getPhoneNumber() { return phoneNumber; }
-    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
+    public String getPassengerName() {
+        return passengerName;
+    }
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+    public void setPassengerName(String passengerName) {
+        this.passengerName = passengerName;
+    }
 
-    public int getAge() { return age; }
-    public void setAge(int age) { this.age = age; }
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
-    public String getGender() { return gender; }
-    public void setGender(String gender) { this.gender = gender; }
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
-    public String getRoute() { return route; }
-    public void setRoute(String route) { this.route = route; }
+    public String getEmail() {
+        return email;
+    }
 
-    public String getBus() { return bus; }
-    public void setBus(String bus) { this.bus = bus; }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-    public String getSeat() { return seat; }
-    public void setSeat(String seat) { this.seat = seat; }
+    public int getAge() {
+        return age;
+    }
 
-    public String getPaymentMethod() { return paymentMethod; }
-    public void setPaymentMethod(String paymentMethod) { this.paymentMethod = paymentMethod; }
+    public void setAge(int age) {
+        this.age = age;
+    }
 
-    public double getAmount() { return amount; }
-    public void setAmount(double amount) { this.amount = amount; }
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getRoute() {
+        return route;
+    }
+
+    public void setRoute(String route) {
+        this.route = route;
+    }
+
+    public String getBus() {
+        return bus;
+    }
+
+    public void setBus(String bus) {
+        this.bus = bus;
+    }
+
+    public String getSeat() {
+        return seat;
+    }
+
+    public void setSeat(String seat) {
+        this.seat = seat;
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "passengerName='" + passengerName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                ", route='" + route + '\'' +
+                ", bus='" + bus + '\'' +
+                ", seat='" + seat + '\'' +
+                ", paymentMethod='" + paymentMethod + '\'' +
+                ", amount=" + amount +
+                '}';
+    }
 }
 

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PSAGoal7Controller">
+   <children>
+      <Button layoutX="391.0" layoutY="146.0" mnemonicParsing="false" onAction="#searchOA" text="Search" />
+      <TableView fx:id="paymentLogsTV" layoutX="70.0" layoutY="185.0" prefHeight="200.0" prefWidth="418.0">
+        <columns>
+          <TableColumn fx:id="dateTC" prefWidth="75.0" text="Date" />
+          <TableColumn fx:id="userNameTC" prefWidth="185.60003662109375" text="User Name" />
+            <TableColumn fx:id="gatewayTC" prefWidth="156.79998779296875" text="Gateway" />
+        </columns>
+      </TableView>
+      <Label fx:id="paymentLogsL" layoutX="320.0" layoutY="22.0" text="Payment Logs">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="d" layoutX="70.0" layoutY="71.0" text="Date " />
+      <Label layoutX="73.0" layoutY="108.0" text="Gateway" />
+      <Label layoutX="362.0" layoutY="71.0" text="User Name" />
+      <DatePicker fx:id="dateDP" layoutX="135.0" layoutY="67.0" />
+      <ComboBox fx:id="gatewayCB" layoutX="135.0" layoutY="105.0" prefWidth="150.0" />
+      <TextField fx:id="userNmaeTF" layoutX="443.0" layoutY="67.0" />
+      <Button layoutX="533.0" layoutY="199.0" mnemonicParsing="false" onAction="#markReviewOA" text="Mark Review" />
+      <Button layoutX="533.0" layoutY="306.0" mnemonicParsing="false" onAction="#exportLogsOA" text="Export logs" />
+      <Button layoutX="645.0" layoutY="401.0" mnemonicParsing="false" onAction="#backToDashboardOA" text="Back to Dashboard" />
+   </children>
+</AnchorPane>
