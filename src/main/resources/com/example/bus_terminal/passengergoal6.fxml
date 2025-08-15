@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.Passengergoal6Controller">
+   <children>
+      <Label layoutX="101.0" layoutY="90.0" text="Bus No:" />
+      <TextField fx:id="BusNoTextField" layoutX="148.0" layoutY="86.0" />
+      <TableView fx:id="TrackBusTableView" layoutX="136.0" layoutY="162.0" prefHeight="200.0" prefWidth="528.0">
+        <columns>
+          <TableColumn fx:id="BusLocationC1" prefWidth="262.4000244140625" text="Bus Location" />
+          <TableColumn fx:id="EstimatedArrivalTimeC2" prefWidth="264.79998779296875" text="Estimated Arrival Time" />
+        </columns>
+      </TableView>
+      <Button layoutX="386.0" layoutY="86.0" mnemonicParsing="false" onAction="#TrackBusOnAction" text="Track Bus" />
+      <Label layoutX="242.0" layoutY="14.0" text="Track Location">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="646.0" layoutY="391.0" mnemonicParsing="false" onAction="#BackToDashBoardOnAction" text="Back To DashBoard" />
+   </children>
+</AnchorPane>

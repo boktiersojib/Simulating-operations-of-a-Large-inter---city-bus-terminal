@@ -1,6 +1,6 @@
 package com.example.bus_terminal.TicketOfficer;
 
-import com.example.bus_terminal.Passenger.Passenger;
+import com.example.bus_terminal.Passenger;
 
 import java.time.LocalDateTime;
 
