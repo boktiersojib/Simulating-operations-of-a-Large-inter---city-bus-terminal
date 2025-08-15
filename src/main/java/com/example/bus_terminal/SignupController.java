@@ -2,20 +2,16 @@ package com.example.bus_terminal;
 
 <<<<<<< HEAD
 import javafx.event.ActionEvent;
-import javafx.scene.control.*;
 =======
 import com.example.bus_terminal.PaymentSystemAdministrator.PaymentSystemAdministrator;
-import com.example.bus_terminal.TicketOfficer.TicketOfficer;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
-import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 import java.time.LocalDate;
->>>>>>> a7b4cab4a1bfe746f5f295b04bd5d60ea3c2e5cf
 
 public class SignupController
 {

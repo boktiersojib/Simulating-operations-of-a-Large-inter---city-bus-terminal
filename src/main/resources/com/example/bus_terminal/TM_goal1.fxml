@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.TM_goal1Controller">
+   <children>
+      <Label layoutX="194.0" text="Approve Buses for Departure">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="pendingSchedulesTV" layoutX="72.0" layoutY="82.0" prefHeight="150.0" prefWidth="655.0">
+        <columns>
+          <TableColumn fx:id="scheduleIDCol" prefWidth="88.80001831054688" text="Schedule ID" />
+          <TableColumn fx:id="routeCol" prefWidth="116.7999267578125" text="Route" />
+            <TableColumn fx:id="departureTimeCol" prefWidth="121.5999755859375" text="Departure Time" />
+            <TableColumn fx:id="arrivalTimeCol" prefWidth="104.79998779296875" text="Arrival Time" />
+            <TableColumn fx:id="busTypeCol" prefWidth="100.800048828125" text="Bus Type" />
+            <TableColumn fx:id="requestStatusCol" prefWidth="125.5999755859375" text="Request Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="234.0" layoutY="262.0" mnemonicParsing="false" onAction="#approveOA" text="Approve" />
+      <Button layoutX="381.0" layoutY="262.0" mnemonicParsing="false" onAction="#editOA" text="Edit" />
+      <Button layoutX="502.0" layoutY="262.0" mnemonicParsing="false" onAction="#rejectOA" text="Reject" />
+      <TextArea fx:id="conflictsCheckTA" layoutX="72.0" layoutY="343.0" prefHeight="91.0" prefWidth="342.0" promptText="&quot;Conflict checks (e.g., overlap, driver clash) will show here&quot;" />
+      <TextArea fx:id="showUpdatesTA" layoutX="466.0" layoutY="343.0" prefHeight="91.0" prefWidth="275.0" promptText="Shows update confirmation and publish status" />
+      <Button layoutX="356.0" layoutY="450.0" mnemonicParsing="false" onAction="#backToDashboardOA" text="Back to Dashboard" />
+   </children>
+</AnchorPane>

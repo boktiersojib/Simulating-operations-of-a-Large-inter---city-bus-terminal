@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.TO_goal8Conroller">
+   <children>
+      <Label layoutX="280.0" text="Booking Records">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="109.0" layoutY="73.0" text="Enter Booking or Payment Reference:">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="enterReferenceTF" layoutX="432.0" layoutY="71.0" />
+      <Button layoutX="361.0" layoutY="121.0" mnemonicParsing="false" onAction="#searchOA" text="Search" />
+      <TextArea fx:id="paymentIssueTA" layoutX="109.0" layoutY="176.0" prefHeight="90.0" prefWidth="373.0" promptText="&quot;Payment issue details will appear here...&quot;" />
+      <CheckBox fx:id="confirmationCheckBox" layoutX="519.0" layoutY="221.0" mnemonicParsing="false" text="Confirmed with Payment Admin" />
+      <Button layoutX="179.0" layoutY="299.0" mnemonicParsing="false" onAction="#retryPaymentOA" text="Retry Payment" />
+      <Button layoutX="481.0" layoutY="299.0" mnemonicParsing="false" onAction="#issueRefundOA" text="Issue Refund" />
+      <TextArea fx:id="updatesTA" layoutX="109.0" layoutY="342.0" prefHeight="72.0" prefWidth="590.0" promptText="&quot;Update message will be shown here...&quot;" />
+      <Button layoutX="329.0" layoutY="441.0" mnemonicParsing="false" onAction="#backToDashboardOA" text="Back to Dashboard" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.TM_goal8Controller">
+   <children>
+      <Label layoutX="226.0" text="Live Tracking Dashboard">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="liveStatusTV" layoutX="112.0" layoutY="98.0" prefHeight="222.0" prefWidth="566.0">
+        <columns>
+          <TableColumn fx:id="busCol" prefWidth="96.00006103515625" text="Bus" />
+          <TableColumn fx:id="routeCol" prefWidth="160.0" text="Route" />
+            <TableColumn fx:id="statusCol" prefWidth="127.20001220703125" text="Status" />
+            <TableColumn fx:id="lastUpdateTimeCol" prefWidth="183.20001220703125" text="Last Update Time" />
+        </columns>
+      </TableView>
+      <Button layoutX="562.0" layoutY="395.0" mnemonicParsing="false" onAction="#backToDashboardOA" text="Back to Dashboard" />
+   </children>
+</AnchorPane>
