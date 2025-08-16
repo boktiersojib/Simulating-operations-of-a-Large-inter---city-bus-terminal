@@ -30,10 +30,7 @@ public class CSAGoal2Controller
 
     @FXML
     public void initialize() {
-        idTC.setCellValueFactory(data -> new SimpleStringProperty(data.getClass().getId()));
-        passengerTC.setCellValueFactory(data -> new SimpleStringProperty(data.getClass().getPassenger()));
-        reasonTC.setCellValueFactory(data -> new SimpleStringProperty(data.getClass().getReason()));
-        statusTC.setCellValueFactory(data -> new SimpleStringProperty(data.getClass().getStatus()));
+
 
 
 
@@ -51,7 +48,7 @@ public class CSAGoal2Controller
     @javafx.fxml.FXML
     public void verifyOA(ActionEvent actionEvent) {
 
-        RefundRequest selected = refundRequestTV.getSelectionModel().getSelectedItem();
+        RefundRequest selected = (RefundRequest) refundRequestTV.getSelectionModel().getSelectedItem();
         if (selected != null) {
             selected.setStatus("Verified");
             refundRequestTV.refresh();
@@ -83,5 +80,29 @@ public class CSAGoal2Controller
 
     @javafx.fxml.FXML
     public void backToDashboardOA(ActionEvent actionEvent) {
+    }
+
+    public void verifyOA(javafx.event.ActionEvent actionEvent) {
+
+    }
+
+    public void sendsPolicyInfoOA(javafx.event.ActionEvent actionEvent) {
+
+    }
+
+    public void initiateRefundProcessOA(javafx.event.ActionEvent actionEvent) {
+
+    }
+
+    public void sendOA(javafx.event.ActionEvent actionEvent) {
+
+    }
+
+    public void closeOA(javafx.event.ActionEvent actionEvent) {
+
+    }
+
+    public void backToDashboardOA(javafx.event.ActionEvent actionEvent) {
+
     }
 }

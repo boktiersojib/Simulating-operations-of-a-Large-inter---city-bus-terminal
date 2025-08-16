@@ -7,10 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.CSAGoal1Controller">
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.csagoal1Controller">
    <children>
-      <Label fx:id="handleQueriesL" layoutX="205.0" layoutY="24.0" text="Handle Booking/Schedule/Payment Queries">
+      <Label fx:id="handleBookingL" layoutX="205.0" layoutY="24.0" text="Handle Booking/Schedule/Payment Queries">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -23,7 +22,7 @@
             <TableColumn fx:id="referanceTC" prefWidth="149.5999755859375" text="Referance" />
         </columns>
       </TableView>
-      <Label fx:id="passengerQueryDetailsL" layoutX="78.0" layoutY="356.0" prefHeight="54.0" prefWidth="217.0" text="Passenger query details">
+      <Label fx:id="passengerqueryDetailsL" layoutX="78.0" layoutY="356.0" prefHeight="54.0" prefWidth="217.0" text="Passenger query details">
          <font>
             <Font size="14.0" />
          </font>

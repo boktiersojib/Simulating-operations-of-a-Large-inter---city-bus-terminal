@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.Passengergoal2Controller">
+   <children>
+      <Label layoutX="65.0" layoutY="103.0" text="Select Bus:" />
+      <Label layoutX="427.0" layoutY="144.0" text="Select Seat:" />
+      <Label layoutX="72.0" layoutY="178.0" text="Name:" />
+      <Label layoutX="71.0" layoutY="207.0" text="Phone:" />
+      <Label layoutX="427.0" layoutY="206.0" prefHeight="18.0" prefWidth="39.0" text="Email:" />
+      <Label layoutX="427.0" layoutY="178.0" text="Source:" />
+      <Label layoutX="68.0" layoutY="144.0" text="Destination:" />
+      <ComboBox fx:id="SelectBusComboBox" layoutX="150.0" layoutY="99.0" prefWidth="150.0" />
+      <ComboBox fx:id="SelectSeatComboBox" layoutX="537.0" layoutY="140.0" prefWidth="150.0" />
+      <TextField fx:id="DestinationTextField" layoutX="151.0" layoutY="140.0" />
+      <TextField fx:id="SourceTextField" layoutX="538.0" layoutY="174.0" />
+      <TextField fx:id="NameTextField" layoutX="150.0" layoutY="174.0" />
+      <TextField fx:id="PhoneTextField" layoutX="150.0" layoutY="203.0" />
+      <TextField fx:id="EmailTextField" layoutX="538.0" layoutY="202.0" />
+      <Label layoutX="427.0" layoutY="238.0" text="Payment Method:" />
+      <ComboBox fx:id="PaymentMethodComboBox" layoutX="538.0" layoutY="234.0" prefWidth="150.0" />
+      <Button layoutX="556.0" layoutY="267.0" mnemonicParsing="false" onAction="#ProceedtoPayOnAction" text="Proceed to Pay" />
+      <Label fx:id="outputLabel" layoutX="34.0" layoutY="334.0" prefHeight="90.0" prefWidth="586.0" />
+      <Label layoutX="69.0" layoutY="238.0" text="Age:" />
+      <Label layoutX="69.0" layoutY="271.0" text="Gender:" />
+      <TextField fx:id="AgeTextField" layoutX="151.0" layoutY="234.0" />
+      <RadioButton fx:id="MaleRadioButton" layoutX="157.0" layoutY="271.0" mnemonicParsing="false" text="Male" />
+      <RadioButton fx:id="FemaleRadioButton" layoutX="225.0" layoutY="271.0" mnemonicParsing="false" text="Female" />
+      <Button layoutX="639.0" layoutY="399.0" mnemonicParsing="false" onAction="#BackToDashBoardOnAction" text="Back to DashBoard" />
+      <Label layoutX="276.0" layoutY="25.0" prefHeight="54.0" prefWidth="217.0" text="Book Ticket">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.PSAGoal8Controller">
    <children>
-      <Label fx:id="fraudAlertsL" layoutX="326.0" layoutY="36.0" text="Fraud Alerts">
+      <Label fx:id="fraudalertsL" layoutX="326.0" layoutY="36.0" text="Fraud Alerts">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -24,7 +24,7 @@
             <TableColumn fx:id="amountTC" prefWidth="130.39996337890625" text="Amount" />
         </columns>
       </TableView>
-      <TextArea fx:id="transactionDetailsL" layoutX="81.0" layoutY="365.0" prefHeight="27.0" prefWidth="318.0" text="             Transaction details/logs">
+      <TextArea fx:id="transactiondetailsL" layoutX="81.0" layoutY="365.0" prefHeight="27.0" prefWidth="318.0" text="             Transaction details/logs">
          <font>
             <Font size="18.0" />
          </font>

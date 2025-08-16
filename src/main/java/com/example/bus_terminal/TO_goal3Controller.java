@@ -31,31 +31,20 @@ public class TO_goal3Controller {
         bookingDetailsTV.setItems(BookingData.getInstance().getBookingList());
     }
 
-    @FXML
-    private void reprintSelectedTicketOA() {
-        Booking selected = bookingDetailsTV.getSelectionModel().getSelectedItem();
-        if (selected != null) {
-            ticketOutputTA.setText(
-                    "=== Ticket Reprint ===\n" +
-                            "Passenger: " + selected.getPassengerName() + "\n" +
-                            "Bus: " + selected.getBus() + "\n" +
-                            "Route: " + selected.getRoute() + "\n" +
-                            "Seat: " + selected.getSeatNumber() + "\n" +
-                            "Date: " + selected.getDate()
-            );
-        } else {
-            ticketOutputTA.setText("Please select a booking to reprint.");
-        }
-    }
-
-    public void searchOA(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("ticket.officer.Dashboard"));
+    @javafx.fxml.FXML
+    public void backToDashboardOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("ticket_officer_Dashboard.fxml"));
         Scene scene= new Scene(fxmlLoader.load());
         Stage stage= new Stage();
         stage.setScene(scene);
         stage.show();
     }
 
+    @javafx.fxml.FXML
+    public void searchOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
     public void reprintTicketOA(ActionEvent actionEvent) {
         Booking selected = bookingDetailsTV.getSelectionModel().getSelectedItem();
         if (selected != null) {

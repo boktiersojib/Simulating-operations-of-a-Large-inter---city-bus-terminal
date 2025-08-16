@@ -1,91 +1,127 @@
 package com.example.bus_terminal;
 
+import com.example.bus_terminal.model.FraudAlerts;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.awt.*;
 import java.time.LocalDate;
 
-public class PSAGoal8Controller
-{
-    @javafx.fxml.FXML
-    private TableColumn amountTC;
-    @javafx.fxml.FXML
-    private ComboBox escalationCB;
-    @javafx.fxml.FXML
-    private Label fraudAlertsL;
-    @javafx.fxml.FXML
-    private TableView fraudeTV;
-    @javafx.fxml.FXML
-    private TableColumn reasonTC;
-    @javafx.fxml.FXML
-    private TableColumn transactionIdTC;
-    @javafx.fxml.FXML
-    private TableColumn dateTC;
-    @javafx.fxml.FXML
-    private TextArea transactionDetailsL;
+public class PSAGoal8Controller {
 
-    @javafx.fxml.FXML
+    @FXML
+    private TableView<FraudAlerts> fraudeTV;
+
+    @FXML
+    private TableColumn<FraudAlerts, String> transactionIdTC;
+
+    @FXML
+    private TableColumn<FraudAlerts, String> reasonTC;
+
+    @FXML
+    private TableColumn<FraudAlerts, LocalDate> dateTC;
+
+    @FXML
+    private TableColumn<FraudAlerts, Double> amountTC;
+
+    @FXML
+    private ComboBox<String> escalationCB;
+
+    @FXML
+    private TextArea transactiondetailsL;
+
+    @FXML
+    private Label fraudalertsL;
+
+    private ObservableList<FraudAlerts> fraudAlertsList = FXCollections.observableArrayList();
+
+    @FXML
     public void initialize() {
-        
-        transactionIdTC.setCellValueFactory(cellData -> new javafx.beans.property.SimpleStringProperty(cellData.getValue().getTransactionId()));
-        reasonTC.setCellValueFactory(cellData -> new javafx.beans.property.SimpleStringProperty(cellData.getValue().getReason()));
-        dateTC.setCellValueFactory(cellData -> new javafx.beans.property.SimpleObjectProperty<>(cellData.getValue().getDate()));
-        amountTC.setCellValueFactory(cellData -> new javafx.beans.property.SimpleObjectProperty<>(cellData.getValue().getAmount()));
+        // Escalation options
+        escalationCB.setItems(FXCollections.observableArrayList(
+                "Low", "Medium", "High", "Critical"
+        ));
 
+        // Table column bindings
+        transactionIdTC.setCellValueFactory(new PropertyValueFactory<>("transactionId"));
+        reasonTC.setCellValueFactory(new PropertyValueFactory<>("reason"));
+        dateTC.setCellValueFactory(new PropertyValueFactory<>("date"));
+        amountTC.setCellValueFactory(new PropertyValueFactory<>("amount"));
 
-        ObservableList<Object> FraudAlerts = FXCollections.observableArrayList(
-                new FraudAlert("TXN001", "Unusual Location", LocalDate.of(2025, 8, 1), 1200.50),
-                new FraudAlert("TXN002", "Multiple Rapid Payments", LocalDate.of(2025, 8, 2), 800.00),
-                new FraudAlert("TXN003", "High Amount", LocalDate.of(2025, 8, 3), 5000.00)
+        // Dummy data
+        fraudAlertsList.addAll(
+                new FraudAlerts("TXN1001", "Multiple failed attempts", LocalDate.now().minusDays(1), 5000.50),
+                new FraudAlerts("TXN1002", "Unusual location", LocalDate.now(), 1200.00),
+                new FraudAlerts("TXN1003", "High amount transaction", LocalDate.now().minusDays(2), 75000.00)
         );
 
-               
+        fraudeTV.setItems(fraudAlertsList);
 
-
-
-
-        escalationCB.getItems().addAll(
-                 "Select Action", "Mark as Valid", "Mark as Suspicious", "Block Transaction", "Refund Transaction",
-                "Escalate to Manager", "Escalate to Fraud Department", "Notify Customer");
-
-
-
+        // Show details on row selection
+        fraudeTV.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal != null) {
+                transactiondetailsL.setText(
+                        "Transaction ID: " + newVal.getTransactionId() +
+                                "\nReason: " + newVal.getReason() +
+                                "\nDate: " + newVal.getDate() +
+                                "\nAmount: " + newVal.getAmount()
+                );
+            }
+        });
     }
 
-    @javafx.fxml.FXML
-    public void alertOA(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void validOA(ActionEvent actionEvent) {
-        showMessage("Marked as Valid");
-    }
-
-    private void showMessage(String markedAsValid) {
-    }
-
-    @javafx.fxml.FXML
-    public void suspiciousOA(ActionEvent actionEvent) {
-
-        showMessage("Marked as Suspicious");
-    }
-
-    @javafx.fxml.FXML
-    public void selectedOA(ActionEvent actionEvent) {
-        String selected = escalationCB.getValue();
-        if (selected != null) {
-            showMessage("Selected Escalation: " + selected);
-        } else {
-            showMessage("Please select an escalation option.");
+    @FXML
+    private void validOA() {
+        FraudAlerts selected = fraudeTV.getSelectionModel().getSelectedItem();
+        if (selected == null) {
+            showAlert("No Selection", "Please select a fraud alert to mark as valid.");
+            return;
         }
+        showAlert("Marked as Valid", "Transaction " + selected.getTransactionId() + " marked as valid.");
     }
 
-    @javafx.fxml.FXML
-    public void backToDashboardOA(ActionEvent actionEvent) {
+    @FXML
+    private void suspiciousOA() {
+        FraudAlerts selected = fraudeTV.getSelectionModel().getSelectedItem();
+        if (selected == null) {
+            showAlert("No Selection", "Please select a fraud alert to mark as suspicious.");
+            return;
+        }
+        showAlert("Marked as Suspicious", "Transaction " + selected.getTransactionId() + " marked as suspicious.");
+    }
+
+    @FXML
+    private void selectedOA() {
+        String escalationLevel = escalationCB.getValue();
+        if (escalationLevel == null) {
+            showAlert("No Escalation Level", "Please select an escalation level.");
+            return;
+        }
+        showAlert("Escalation Selected", "Escalation level set to: " + escalationLevel);
+    }
+
+    @FXML
+    private void alertOA() {
+        FraudAlerts selected = fraudeTV.getSelectionModel().getSelectedItem();
+        if (selected == null) {
+            showAlert("No Selection", "Please select a fraud alert to send an alert.");
+            return;
+        }
+        showAlert("Alert Sent", "Alert sent for transaction: " + selected.getTransactionId());
+    }
+
+    @FXML
+    private void backToDashboardOA() {
+        System.out.println("Navigating back to dashboard...");
+    }
+
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }

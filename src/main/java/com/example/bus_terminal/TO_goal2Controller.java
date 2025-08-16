@@ -130,7 +130,7 @@ public class TO_goal2Controller {
 
     @FXML
     void backToDashboardOA(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("ticket.officer.Dashboard"));
+        FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("ticket_officer_Dashboard.fxml"));
         Scene scene= new Scene(fxmlLoader.load());
         Stage stage= new Stage();
         stage.setScene(scene);

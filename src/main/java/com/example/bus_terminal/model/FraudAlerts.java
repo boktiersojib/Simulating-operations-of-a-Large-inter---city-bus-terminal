@@ -47,6 +47,7 @@ public class FraudAlerts {
         this.amount = amount;
     }
 
+
     @Override
     public String toString() {
         return "FraudAlerts{" +

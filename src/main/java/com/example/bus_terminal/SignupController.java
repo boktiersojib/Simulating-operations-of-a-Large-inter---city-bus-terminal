@@ -1,20 +1,18 @@
 package com.example.bus_terminal;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 import javafx.event.ActionEvent;
-=======
-import com.example.bus_terminal.PaymentSystemAdministrator.PaymentSystemAdministrator;
+import com.example.bus_terminal.PaymentSystemAdministrator;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-=======
+
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
->>>>>>> 8048ffea2334e2bcfd339907e208c5b2a3f2abf1
+
 
 import java.time.LocalDate;
 

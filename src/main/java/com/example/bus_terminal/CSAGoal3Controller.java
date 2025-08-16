@@ -46,4 +46,24 @@ public class CSAGoal3Controller
     @javafx.fxml.FXML
     public void backToDashboardOA(ActionEvent actionEvent) {
     }
+
+    public void resendOA(javafx.event.ActionEvent actionEvent) {
+
+    }
+
+    public void logOA(javafx.event.ActionEvent actionEvent) {
+
+    }
+
+    public void closeRequestOA(javafx.event.ActionEvent actionEvent) {
+
+    }
+
+    public void backToDashboardOA(javafx.event.ActionEvent actionEvent) {
+
+    }
+
+    public void searchBookingOA(javafx.event.ActionEvent actionEvent) {
+
+    }
 }

@@ -46,5 +46,7 @@
       <TextField fx:id="emailTF" layoutX="368.0" layoutY="367.0" />
       <TextField fx:id="ageTF" layoutX="368.0" layoutY="399.0" />
       <Button layoutX="602.0" layoutY="446.0" mnemonicParsing="false" onAction="#backToTicketingDashboardOA" text="Back to Ticketing Dashboard" />
+      <Button layoutX="62.0" layoutY="237.0" mnemonicParsing="false" onAction="#saveToBinaryFileOA" text="Save to Binary file" />
+      <Button layoutX="67.0" layoutY="195.0" mnemonicParsing="false" onAction="#saveToTextFileOA" text="Save to Text file" />
    </children>
 </AnchorPane>

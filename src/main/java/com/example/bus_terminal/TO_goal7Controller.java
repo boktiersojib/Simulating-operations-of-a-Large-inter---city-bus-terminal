@@ -76,7 +76,7 @@ public class TO_goal7Controller {
 
     @FXML
     private void backToDashboardOA() throws IOException {
-        FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("ticket.officer.Dashboard"));
+        FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("ticket_officer_Dashboard.fxml"));
         Scene scene= new Scene(fxmlLoader.load());
         Stage stage= new Stage();
         stage.setScene(scene);

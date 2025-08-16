@@ -58,7 +58,7 @@ public class PSAGoal4Controller {
         paymentMethodType.setCellValueFactory(new PropertyValueFactory<>("paymentMethod"));
 
         // Populate TableView
-        reportTV.setItems(reports);
+        reportTV.setItems((ObservableList<PaymentReport>) reports);
     }
 
     @FXML

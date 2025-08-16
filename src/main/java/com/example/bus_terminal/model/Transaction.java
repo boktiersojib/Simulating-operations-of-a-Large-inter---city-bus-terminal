@@ -53,11 +53,14 @@ public class Transaction {
     }
 
     public Object getTransactionId() {
+        return null;
     }
 
     public String getAmount() {
+        return "";
     }
 
     public String getMethod() {
+        return "";
     }
 }

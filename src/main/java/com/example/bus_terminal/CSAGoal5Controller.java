@@ -51,7 +51,7 @@ public class CSAGoal5Controller
 
         String name = passengerNameTF.getText();
         String contact = passengerContactTF.getText();
-        String type = complaintTypeCB.getValue();
+        String type = complaintTypeCB.getValue().toString();
         String details = complaintDetailsTA.getText();
     }
 

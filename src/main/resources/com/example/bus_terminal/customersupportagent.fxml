@@ -56,7 +56,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <TextArea fx:id="infoTA" layoutX="36.0" layoutY="96.0" prefHeight="200.0" prefWidth="383.0" />
+            <TextArea fx:id="InfoTA" layoutX="36.0" layoutY="96.0" prefHeight="200.0" prefWidth="383.0" />
          </children>
       </AnchorPane>
    </right>

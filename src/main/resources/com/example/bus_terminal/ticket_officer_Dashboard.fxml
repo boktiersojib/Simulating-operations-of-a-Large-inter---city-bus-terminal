@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="ticketOfficerDashboardBP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.ticket_officer_DashboardController">
+   <left>
+      <VBox prefWidth="200.0" style="-fx-background-color: rgba(100, 100, 100, 1);" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#bookingDashboardOA" prefWidth="200.0" text="Booking Dashboard" />
+            <Button mnemonicParsing="false" onAction="#ticketingModuleOA" prefWidth="200.0" text="Ticketing Module" />
+            <Button mnemonicParsing="false" onAction="#reprintsTicketsOA" prefWidth="200.0" text="Reprint Tickets" />
+            <Button mnemonicParsing="false" onAction="#seatMapOA" prefWidth="200.0" text="Seat Map" />
+            <Button mnemonicParsing="false" onAction="#cancelTicketsOA" prefWidth="200.0" text="Cancel Tickets" />
+            <Button mnemonicParsing="false" onAction="#reportsModuleOA" prefWidth="200.0" text="Reports Module" />
+            <Button mnemonicParsing="false" onAction="#updatePassengerDetailsOA" prefWidth="200.0" text="Update Passenger Details" />
+            <Button mnemonicParsing="false" onAction="#bookingRecordsOA" prefWidth="200.0" text="Bookoing Records" />
+            <Button mnemonicParsing="false" onAction="#signOutOA" prefWidth="200.0" text="Sign Out" />
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="211.0" layoutY="35.0" prefHeight="70.0" prefWidth="187.0" text="Dashboard">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="infoTextAreaTA" layoutX="94.0" layoutY="137.0" prefHeight="200.0" prefWidth="417.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.Drivergoal5Controller">
+   <children>
+      <Label layoutX="320.0" layoutY="114.0" text="Select Trip:" />
+      <ComboBox fx:id="SelectTripComboBox" layoutX="399.0" layoutY="110.0" prefWidth="150.0" />
+      <Label layoutX="49.0" layoutY="114.0" text="Incident Report:" />
+      <Label layoutX="51.0" layoutY="154.0" text="Amount Fuel:" />
+      <Label layoutX="313.0" layoutY="154.0" text="Amount Cost:" />
+      <TextField fx:id="IncidentReportTextField" layoutX="142.0" layoutY="110.0" />
+      <TextField fx:id="AmountFuelTextField" layoutX="143.0" layoutY="150.0" />
+      <TextField fx:id="AmountCostTextFIeld" layoutX="399.0" layoutY="150.0" />
+      <Button layoutX="259.0" layoutY="225.0" mnemonicParsing="false" onAction="#SubmitButtonOnAction" text="Submit" />
+      <Button layoutX="464.0" layoutY="332.0" mnemonicParsing="false" onAction="#BackToDashBoardOnAction" text="Back To DashBoard" />
+      <Label layoutX="32.0" layoutY="28.0" text="Report breakdowns or accidents">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

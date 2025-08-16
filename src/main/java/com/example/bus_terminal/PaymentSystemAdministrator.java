@@ -5,7 +5,7 @@ import java.util.Random;
 
 
 public class PaymentSystemAdministrator extends User {
-    private int status: // status == 2 pending; // 1 == accepted; 0 == rejected;
+    private int status; // status == 2 pending; // 1 == accepted; 0 == rejected;
 
 
     public PaymentSystemAdministrator(String name, String phoneNo, String email, String address, String gender, String password, LocalDate dob) {

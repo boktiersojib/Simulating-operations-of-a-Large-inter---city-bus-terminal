@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bus_terminal.Passengergoal5Controller">
+   <children>
+      <Label layoutX="246.0" text="Customer Support Agent">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="bookingErrorCheckBox" layoutX="81.0" layoutY="61.0" mnemonicParsing="false" text="Booking Error" />
+      <CheckBox fx:id="paymentErrorCheckBox" layoutX="499.0" layoutY="61.0" mnemonicParsing="false" text="Payment Error" />
+      <CheckBox fx:id="scheduleMissmatchCheckBox" layoutX="81.0" layoutY="102.0" mnemonicParsing="false" text="Schedule Missmatch" />
+      <CheckBox fx:id="complaintForServiceCheckBox" layoutX="499.0" layoutY="102.0" mnemonicParsing="false" text="Complaint for Service" />
+      <Label layoutX="81.0" layoutY="179.0" text="Description" />
+      <TextArea fx:id="descriptionTA" layoutX="164.0" layoutY="179.0" prefHeight="99.0" prefWidth="400.0" />
+      <Button layoutX="639.0" layoutY="216.0" mnemonicParsing="false" onAction="#submitOA" text="Submit" />
+      <Button layoutX="608.0" layoutY="319.0" mnemonicParsing="false" onAction="#backToDashboardOA" text="Back to Dashboard" />
+      <Label fx:id="outputL" layoutX="81.0" layoutY="312.0" prefHeight="40.0" prefWidth="182.0" />
+   </children>
+</AnchorPane>

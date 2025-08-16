@@ -74,12 +74,10 @@ public class PSAGoal1Controller {
     @FXML
     public void backToDashboardOA() throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Login.fxml"));
-        Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("login.fxml"));
+        Scene scene= new Scene(fxmlLoader.load());
+        Stage stage= new Stage();
         stage.setScene(scene);
-        stage.setTitle("Login");
         stage.show();
     }
 }

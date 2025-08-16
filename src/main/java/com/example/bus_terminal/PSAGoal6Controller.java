@@ -1,101 +1,116 @@
 package com.example.bus_terminal;
 
 import com.example.bus_terminal.model.PaymentMethod;
-import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.awt.*;
 import java.time.LocalDate;
 
-import
+public class PSAGoal6Controller {
 
-public class PSAGoal6Controller
-{
     @FXML
-    private Label notifiesStackeholdersL;
+    private ComboBox<String> methodNameCB;
+
     @FXML
-    private TableColumn dateTC;
+    private CheckBox toggloeSwitchOnCheckBOx; // "on"
+
     @FXML
-    private CheckBox toggleSWitchOfCheckBox;
+    private CheckBox toggleSWitchOfCheckBox; // "off"
+
     @FXML
-    private TableColumn transactionLimitTC;
+    private TableView<PaymentMethod> paymentMethodTV;
+
     @FXML
-    private TableColumn toggleSwitchTC;
+    private TableColumn<PaymentMethod, String> methodNameTC;
+
     @FXML
-    private TableColumn feesLimitTC;
+    private TableColumn<PaymentMethod, String> toggleSwitchTC;
+
     @FXML
-    private CheckBox toggloeSwitchOnCheckBOx;
+    private TableColumn<PaymentMethod, Double> transactionLimitTC;
+
     @FXML
-    private ComboBox methodNameCB;
+    private TableColumn<PaymentMethod, Double> feesLimitTC;
+
     @FXML
-    private TableColumn methodNameTC;
+    private TableColumn<PaymentMethod, LocalDate> dateTC;
+
     @FXML
-    private TableView paymentMethodTV;
+    private Label notifiesstackeholdersL;
+
+    private ObservableList<PaymentMethod> paymentMethodList = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
-        methodNameCB.getItems().addAll(
-                "Bkash", "Rocket", "Nagad", "Upay", "Credit card", "Google pay");
+        // ComboBox sample values
+        methodNameCB.setItems(FXCollections.observableArrayList(
+                "Bkash", "Nagad", "Rocket", "Credit Card", "Debit Card", "Cash"
+        ));
 
-        methodNameTC.setCellValueFactory(cell -> new SimpleStringProperty(cell.getClass().getMethodName()));
-        toggleSwitchTC.setCellValueFactory(cell -> new SimpleStringProperty(cell.getClass().getToggleSwitch()));
-        transactionLimitTC.setCellValueFactory(cell -> new SimpleObjectProperty<>(cell.getValue().getTransactionLimit()));
-        feesLimitTC.setCellValueFactory(cell -> new SimpleObjectProperty<>(cell.getValue().getFeesLimit()));
-        dateTC.setCellValueFactory(cell -> new SimpleObjectProperty<>(cell.getValue().getDate()));
+        // Make checkboxes mutually exclusive
+        toggloeSwitchOnCheckBOx.setOnAction(e -> {
+            if (toggloeSwitchOnCheckBOx.isSelected()) {
+                toggleSWitchOfCheckBox.setSelected(false);
+            }
+        });
 
+        toggleSWitchOfCheckBox.setOnAction(e -> {
+            if (toggleSWitchOfCheckBox.isSelected()) {
+                toggloeSwitchOnCheckBOx.setSelected(false);
+            }
+        });
 
-        ObservableList paymentMethods = null;
-        paymentMethods.addAll(
-                new PaymentMethod("Bkash", "ON", 1000, 1.5, LocalDate.now()),
-                new PaymentMethod("Credit card", "OFF", 5000, 2.0, LocalDate.now().minusDays(1))
-        );
+        // Table column bindings
+        methodNameTC.setCellValueFactory(new PropertyValueFactory<>("methodName"));
+        toggleSwitchTC.setCellValueFactory(new PropertyValueFactory<>("toggleSwitch"));
+        transactionLimitTC.setCellValueFactory(new PropertyValueFactory<>("transactionLimit"));
+        feesLimitTC.setCellValueFactory(new PropertyValueFactory<>("feesLimit"));
+        dateTC.setCellValueFactory(new PropertyValueFactory<>("date"));
 
-        paymentMethodTV.setItems(paymentMethods);
-
-
-
-
-    }
-
-    @Deprecated
-    public void approveOA(ActionEvent actionEvent) {
-        System.out.println("Approved");
-    }
-
-    @Deprecated
-    public void rejectOA(ActionEvent actionEvent) {
-        System.out.println("Rejected");
-    }
-
-    @Deprecated
-    public void searchOA(ActionEvent actionEvent) {
-        System.out.println("Search action");
+        paymentMethodTV.setItems(paymentMethodList);
     }
 
     @FXML
-    public void saveOA(ActionEvent actionEvent) {
+    private void saveOA() {
+        String methodName = methodNameCB.getValue();
+        String toggleSwitch = toggloeSwitchOnCheckBOx.isSelected() ? "ON" :
+                toggleSWitchOfCheckBox.isSelected() ? "OFF" : null;
 
-        String method = methodNameCB.getValue();
-        String toggle = toggloeSwitchOnCheckBOx.isSelected() ? "ON" : "OFF";
-        double transactionLimit = 2000; // Example value
-        double feesLimit = 1.8;         // Example value
-        LocalDate date = LocalDate.now();
-
-        if (method != null) {
-            PaymentMethod paymentMethods = null;
-            paymentMethods.add(new PaymentMethod(method, toggle, transactionLimit, feesLimit, date));
+        if (methodName == null || toggleSwitch == null) {
+            showAlert("Validation Error", "Please select both a method name and toggle switch.");
+            return;
         }
 
+        // For this example, limits are hardcoded or can be generated randomly
+        double transactionLimit = Math.round(Math.random() * 10000) / 1.0;
+        double feesLimit = Math.round(Math.random() * 500) / 1.0;
+        LocalDate date = LocalDate.now();
+
+        PaymentMethod pm = new PaymentMethod(methodName, toggleSwitch, transactionLimit, feesLimit, date);
+        paymentMethodList.add(pm);
+
+        notifiesstackeholdersL.setText("Notifies stakeholders: Added " + methodName + " (" + toggleSwitch + ")");
+
+        // Reset selections
+        methodNameCB.getSelectionModel().clearSelection();
+        toggloeSwitchOnCheckBOx.setSelected(false);
+        toggleSWitchOfCheckBox.setSelected(false);
     }
 
     @FXML
-    public void backToDashboardOA(ActionEvent actionEvent) {
+    private void backToDashboardOA() {
+        // This could be navigation logic — placeholder for now
+        System.out.println("Navigating back to dashboard...");
+    }
+
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }

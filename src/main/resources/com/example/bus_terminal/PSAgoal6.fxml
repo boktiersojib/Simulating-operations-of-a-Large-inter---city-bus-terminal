@@ -24,7 +24,7 @@
             <TableColumn fx:id="dateTC" prefWidth="123.20001220703125" text="Date" />
         </columns>
       </TableView>
-      <Label fx:id="notifiesStackeholdersL" layoutX="203.0" layoutY="447.0" prefHeight="18.0" prefWidth="284.0" text="Notifies stakeholders">
+      <Label fx:id="notifiesstackeholdersL" layoutX="203.0" layoutY="447.0" prefHeight="18.0" prefWidth="284.0" text="Notifies stakeholders">
          <font>
             <Font size="18.0" />
          </font>
